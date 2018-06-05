@@ -1,0 +1,51 @@
+{
+  "name": "clients-oura-v2-teaser",
+  "version": "1.0.0",
+  "description": "https://app.activecollab.com/128587/projects/70?modal=Task-3402-70",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LumoSpark/clients-oura.git"
+  },
+  "author": "Lumolink",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --content-base ./ --port 9966 --hot",
+    "webpack-watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015-webpack": "^6.4.3",
+    "bootstrap": "^4.1.1",
+    "compass-sass-mixins": "^0.12.7",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "exports-loader": "^0.7.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "fluidable": "git+https://github.com/andri/fluidable.git",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-loader": "^0.4.5",
+    "html-webpack-harddisk-plugin": "^0.1.0",
+    "html-webpack-plugin": "^2.29.0",
+    "image-webpack-loader": "^3.3.1",
+    "imagemin-webpack-plugin": "^1.5.0-beta.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.5.3",
+    "optimize-css-assets-webpack-plugin": "^2.0.0",
+    "popper.js": "^1.14.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "sass-resources-loader": "^1.2.1",
+    "stringify-object": "^3.2.0",
+    "style-loader": "^0.18.2",
+    "transfer-webpack-plugin": "^0.1.4",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-merge": "^4.1.0"
+  }
+}

@@ -1,0 +1,21 @@
+=font($family, $size, $height, $color, $decoration, $transform, $spacing)
+	font-family: $family
+	font-size: $size
+	line-height: $height
+	color: $color
+	text-decoration: $decoration
+	text-transform: $transform
+	letter-spacing: $spacing
+// Change font size
+=chageFontSize($size, $height)
+	font-size: $size
+	line-height: $height
+=transition($speed)
+	transition:  all $speed cubic-bezier(0.645, 0.045, 0.355, 1)
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
