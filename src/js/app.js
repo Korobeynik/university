@@ -1,15 +1,6 @@
 import "../sass/style.sass";
-
 import $ from 'jquery';
 
-
-$(document).ready(function(){
-
-		$('body').click(function(){
-			$(this).css('backgroundColor', 'red');
-		});
-
-});
-
+import '../libs/owlCarousel/owl.carousel.js'
 import './modules/common.js'
 
