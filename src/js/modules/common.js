@@ -37,4 +37,9 @@ jQuery(document).ready(function(){
         //jQuery("#content").toggleClass("active");
     });
 
+    jQuery('#btn-video').click(function() {
+       jQuery('#exampleModalCenter').modal('show');
+       console.log("Modal open");
+    });
+
 });
