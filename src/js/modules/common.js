@@ -25,15 +25,15 @@ jQuery(document).ready(function(){
             1000:{
                 items:3,
                 nav:true,
-                loop:false
+                loop:true
             }
         }
     });
 
     jQuery(".ninja-btn").click(function() {
         jQuery(this).toggleClass("active");
-        jQuery(".mainMenu").slideToggle();
         jQuery(".mainMenu").toggleClass('active');
+        jQuery(".header__middle nav").toggleClass('active');
         //jQuery("#content").toggleClass("active");
     });
 

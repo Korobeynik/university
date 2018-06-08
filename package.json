@@ -1,13 +1,12 @@
 {
-  "name": "clients-oura-v2-teaser",
+  "name": "University",
   "version": "1.0.0",
-  "description": "https://app.activecollab.com/128587/projects/70?modal=Task-3402-70",
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LumoSpark/clients-oura.git"
+    "url": "git+https://github.com/Korobeynik/university"
   },
-  "author": "Lumolink",
+  "author": "Korobeynik Yura",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --content-base ./ --port 9966 --hot",
