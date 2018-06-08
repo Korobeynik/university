@@ -11,6 +11,15 @@ body
 	line-height: 1.5
 	overflow-x: hidden
 
+.mobile
+	display: none
+
+.desktop--hidden
+	display: none !important
+
+.ninja-btn
+	display: none	
+
 ul
 	padding: 0
 	margin: 0
@@ -32,6 +41,9 @@ section
 	font-weight: bold
 	line-height: 1.56
 	letter-spacing: normal
+	color: $light-navy
+
+a
 	color: $light-navy
 
 .title--hot, .more
@@ -80,6 +92,7 @@ section
 	color: $white
 	transition: all 0.4s ease
 	border: solid 1px $white
+	border-radius: 0px
 	&:hover
 		background-color: $white
 		color: $light-navy
@@ -91,3 +104,16 @@ section
 		&:hover
 			background-color: $light-navy
 			color: $white
+
+
+.close 
+	float: right
+	font-size: 2.5rem
+	font-weight: 100
+	line-height: 1
+	color: #fff
+	text-shadow: none
+	opacity: 1
+	position: absolute
+	right: -25px
+	top: -30px

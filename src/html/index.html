@@ -13,7 +13,8 @@
 </head>
 <body class="home">
 	<div class="jumbotron">
-		<img src="/img/bg_header.jpg" alt="" class="jumbotron_bg">
+		<img src="/img/bg_header.jpg" alt="" class="jumbotron_bg jumbotron_bg--desktop">
+		<img src="/img/mobile/01.png" alt="" class="jumbotron_bg jumbotron_bg--mobile">
 		<%= require('html-loader!./modules/header/header.html') %>
 		<div class="container">
 			<div class="col-12">
@@ -22,9 +23,9 @@
 				</div>
 			</div>
 			<div class="col-12">
-				<div class="jumbotron__video">
+				<div class="jumbotron__video"  data-toggle="modal" data-target="#exampleModalCenter">
 					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="27" viewBox="0 0 20 27">
-					    <path fill="#FFF" fill-rule="evenodd" d="M20 13.5L0 27V0z"/>
+							<path fill="#FFF" fill-rule="evenodd" d="M20 13.5L0 27V0z"/>
 					</svg>
 					<span>whatch the film</span>
 				</div>
@@ -35,6 +36,17 @@
 	<%= require('html-loader!./modules/content/content.html') %>
 	
 	<%= require('html-loader!./modules/footer/footer.html') %>
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<iframe  src="https://www.youtube-nocookie.com/embed/f_igRXOMu8U?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
