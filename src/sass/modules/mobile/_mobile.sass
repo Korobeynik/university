@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1100px)
 	//Mobile Style
 	.header__top
 		display: none
@@ -99,7 +99,7 @@
 			-moz-transition: all 0.3s ease-in-out
 			-o-transition: all 0.3s ease-in-out
 			-ms-transition: all 0.3s ease-in-out
-			background-color: #000
+			background-color: $light-navy
 			width: 44px
 			height: 4px
 			&:before, &:after
@@ -112,7 +112,7 @@
 				-moz-transition: all 0.3s ease-in-out
 				-o-transition: all 0.3s ease-in-out
 				-ms-transition: all 0.3s ease-in-out
-				background-color: #000
+				background-color: $light-navy
 				width: 44px
 				height: 4px
 			position: relative
@@ -144,12 +144,73 @@
 				-o-transform: rotate(135deg)
 				-ms-transform: rotate(135deg)
 		
+	.news-top-line
+		flex-wrap: wrap
+	.news__list
+		display: flex
+		flex-wrap: wrap
+	.news__list__item
+		width: 50%
+	.tw:before
+		left: -50%
+		right: 0
+	.press__content:before
+		right: -50%
+		width: 300%
+	.slider--wrap
+		width: 100%
+	.jumbotron__content
+		width: 100%
+	.study__lineament
+		text-align: center	
+	.study__lineament__item 
+		text-align: center
+	.study__lineament__item .text
+		text-align: center
+		padding-right: 0
+	.study__content
+		text-align: center
+	.study__content__item
+		margin-bottom: 30px
+	.tw__content
+		padding-left: 0
+	.study__lineament__item:after
+		left: 50%
+		transform: translateX(-50%)
+	.owl-dots
+		position: relative
+		display: block
+		opacity: 1
+		text-align: center
+		padding: 20px 0
 
+	button.owl-dot
+		display: inline-block
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		background-color: $light-navy !important
+		margin: 0 3px
+		border: 1px solid $light-navy !important
+		&.active
+			background-color: #fff	!important
+			border: 1px solid $light-navy	
 
+	.jumbotron
+		margin-bottom: 0	
+	.features__grid
+		width: 1200px
+		min-width: 1200px
+		overflow-x: scroll	
+												
 
 
 @media screen and (max-width: 600px)
 	//Mobile Style
+	.features__grid
+		width: 100%
+		min-width: 100%
+		overflow-x: inherit
 	.jumbotron
 		min-height: 580px
 	.btn
@@ -194,7 +255,8 @@
 		top: 0
 		bottom: 100%
 		width: 100%
-
+	.news__list__item
+		width: 100%	
 	.features--mobile
 		.features__item
 			display: flex
@@ -203,8 +265,8 @@
 		.features__grid .features__item
 			width: 300px
 			min-width: 300px 
-
-	
+	.slider--wrap
+		width: 100%
 	.study__lineament__item .procent
 		font-size: 40px
 	.study__lineament__item .text
@@ -240,15 +302,19 @@
 	.slider__item .title,
 	.slider__item .faculty
 		font-size: 15px
-
-
+	.slider__item
+		width: 100%
+		padding-top: 15%
 	.owl-dots
 		position: relative
 		display: block
 		opacity: 1
 		text-align: center
 		padding: 20px 0
-
+	.study__title
+		margin-bottom: 25px
+	.news-top-line
+		margin-bottom: 10px	
 	.museum
 		background-image: url(../img/mobile/03.png) !important
 		padding-top: 55%
@@ -303,7 +369,7 @@
 		padding-left: 0
 		padding: 15px
 	footer
-		padding: 15px
+		padding: 0 15px
 		.functionPanel
 			margin-bottom: 15px
 		section
@@ -327,16 +393,18 @@
 	.features__item:after
 		right: 10px
 	section
-		padding: 40px 0
+		padding: 30px 0
 	.slider
-		margin-top: 10px			
+		margin-top: 10px
+	.features__item.item--selected .features__content
+		padding-left: 15px				
 
 
 @media screen and (max-width: 320px)
 	.news__menu li a
 		font-size: 12px
 	section
-		padding: 40px 0	
+		padding: 30px 0	
 	.slider__item
 		padding-left: 10px
 	.slider__item .faculty, .slider__item .title
@@ -352,4 +420,4 @@
 	.features__item:after
 		right: 5px
 	.jumbotron
-		min-height: 580px																									
+		min-height: 520px																									

@@ -1,5 +1,27 @@
 jQuery(document).ready(function(){
 
+    let listArray = jQuery('.news [data-content]');
+    let linkCategory = jQuery('#news__menu__link');
+    jQuery('[data-tab]').on('click', function(event) {
+            event.preventDefault();
+            let dataLink = jQuery(this).attr('href');
+            linkCategory.attr('href', dataLink);
+            let tabActive = jQuery(this).data('tab');
+            listArray.each( function(index) {
+               if(tabActive == jQuery(this).data('content')){
+                   console.log(index);
+                     jQuery(this).css({
+                         display: 'flex',
+                     });
+         } else  {
+            jQuery(this).css('display', 'none')
+         }
+      });
+            
+            jQuery('.news__menu li').removeClass('active');
+            jQuery(this).closest('li').addClass('active');
+    });
+
 	var owl = jQuery('.owl-carousel');
     owl.owlCarousel({
         items:3,
@@ -18,11 +40,16 @@ jQuery(document).ready(function(){
                 autoplay:false
             },
             600:{
-                items:3,
+                items:2,
                 nav:false,
                 autoplay:false
             },
             1000:{
+                items:2,
+                nav:true,
+                loop:true
+            },
+            1200:{
                 items:3,
                 nav:true,
                 loop:true
@@ -40,6 +67,9 @@ jQuery(document).ready(function(){
     jQuery('#btn-video').click(function() {
        jQuery('#exampleModalCenter').modal('show');
        console.log("Modal open");
+       jQuery('body.modal-open').css('padding', 0);
+       jQuery("body").removeClass("modal-open");
     });
+
 
 });
