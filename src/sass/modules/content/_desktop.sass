@@ -61,6 +61,50 @@
 		width: 100%
 		height: 100%
 
+
+.promoTitle
+	background-size: cover
+	background-position: center
+	min-height: 300px
+	display: flex
+	align-items: center
+	justify-content: center
+
+.promoTitle__name
+	color: $white
+	text-align: center
+	font-size: 70px
+	font-weight: bold
+
+
+.breadcrumbs
+	padding-top: 30px
+	padding-bottom: 25px
+	li
+		display: inline-block
+		margin-right: 10px
+		position: relative
+		&:last-child
+			&:after
+				display: none
+		&:after
+			content: "/"
+			font-weight: bold
+			position: absolute
+			right: -11px
+		a
+			font-size: 14px
+		&:nth-child(1)
+			a
+				font-weight: bold
+		&:nth-child(2)
+			a
+				font-weight: bold		
+
+.asideMenu
+	padding: 14px 25px 25px 25px
+	background-color: $gray
+
 .features
 	background-color: #fff
 	padding-top: 50px
