@@ -69,6 +69,7 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	text-transform: uppercase
 
 .promoTitle__name
 	color: $white
@@ -102,11 +103,33 @@
 				font-weight: bold		
 
 .asideMenu
-	padding: 14px 25px 25px 25px
 	background-color: $gray
+	a
+		font-size: 16px
+	> li
+		> a
+			font-weight: bold
+			padding: 14px 25px 15px 25px
+			display: block
+			width: 100%
+	li
+		&.active
+			> a
+				color: $white
+				background-color: $light-navy	
+		ul
+			padding-top: 10px
+			display: none	
+			a
+				font-size: 16px
+				display: block
+				padding: 10px 25px
+				padding-left: 40px
+				font-weight: 300
+				line-height: 1.3	
 
 .features
-	background-color: #fff
+	background-color: $white
 	padding-top: 50px
 .features__item
 	display: flex
@@ -486,3 +509,155 @@
 		font-weight: bold
 		line-height: 1.67
 		margin-bottom: 12px							
+
+
+/************************************  Content ***************************/
+
+.mainContent
+.educationContent
+
+
+.mainContent__title
+	font-size: 36px
+	text-transform: uppercase
+	color: $light-navy
+	font-weight: bold
+	margin-bottom: 22px
+.mainContent__description
+	font-size: 18px
+	margin-bottom: 35px
+
+.educationContent__grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 40px
+	> div
+		padding: 0
+		// margin-right: 20px
+		margin-bottom: 20px
+		max-width: 49%
+		background-size: 107%
+		background-repeat: no-repeat
+		&:nth-child(even)
+			margin-right: 0
+.educationContent__item
+	min-height: 210px
+	padding: 40px
+	position: relative
+	transition: all 0.3s ease
+	display: block
+	height: 100%
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0, 0.3)
+		z-index: 0
+	&:hover
+		overflow: hidden
+		.edu--bg
+			//transform: translateX(0%)
+			width: 100%
+		.educationContent__item__title
+			opacity: 1
+			position: relative
+			z-index: 10
+		.educationContent__item__level
+			color: $light-navy
+			position: relative
+			z-index: 10		
+.edu--bg
+	width: 10px
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+	background: $sand
+	transition: all 0.3s ease
+.educationContent__item__title
+	margin-bottom: 60px
+	opacity: 0
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 16px
+	color: $white
+.educationContent__item__level
+	color: $white
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 16px
+	position: relative
+	z-index: 1		
+
+
+.timeLine
+	padding-top: 30px
+
+.timeLine--circle
+	width: 22px
+	height: 22px
+	background-color: #113060
+	border: solid 4px #ffffff
+
+.timeLine__item
+	display: flex
+	&:last-child
+		.timeLine__date
+			&:before
+				display: none
+
+.timeLine__date
+	min-width: 255px
+	margin-right: 55px
+	text-align: right
+	padding-bottom: 35px
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		right: -36px
+		top: 4px
+		width: 15px
+		height: 15px
+		background-color: $white
+		border: solid 3px #113060
+		border-radius: 50%
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		right: -31px
+		top: 23px
+		height: 93%
+		width: 4px
+		background-color: #dae0e9	
+	img
+		max-width: 100%
+	.timeLine__date__text
+		margin-bottom: 15px
+		color: #2f3642
+		font-weight: bold
+		font-size: 18px
+		line-height: 1.44	
+
+.timeLine__content
+	margin-bottom: 50px
+	p
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0	
+
+
+
+.timeLine__content--bg
+	background-size: cover
+	background-position:  center
+	.timeLine__content__text
+		padding: 25px
+		color: $white

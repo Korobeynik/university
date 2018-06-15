@@ -71,5 +71,14 @@ jQuery(document).ready(function(){
        jQuery("body").removeClass("modal-open");
     });
 
+    jQuery('.asideMenu li.active ul').show();
+    jQuery('.asideMenu > li > a').on('click', function(event) {
+        event.preventDefault();
+        jQuery('.asideMenu li').removeClass('active');
+        jQuery('.asideMenu ul').slideUp();
+        jQuery(this).closest('li').addClass('active');
+        jQuery(this).closest('li').find('ul').slideDown();
+    });
+
 
 });

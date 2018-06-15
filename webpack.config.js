@@ -119,6 +119,10 @@ module.exports = {
         filename: './education.html' ,
         template: './html/education.html'
       }),
+       new HtmlWebpackPlugin({
+        filename: './history.html' ,
+        template: './html/history.html'
+      }),
   
       new webpack.ProvidePlugin({
         $: 'jquery',
