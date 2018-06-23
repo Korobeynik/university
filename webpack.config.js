@@ -123,6 +123,10 @@ module.exports = {
         filename: './history.html' ,
         template: './html/history.html'
       }),
+        new HtmlWebpackPlugin({
+        filename: './contact.html' ,
+        template: './html/contact.html'
+      }),
   
       new webpack.ProvidePlugin({
         $: 'jquery',
