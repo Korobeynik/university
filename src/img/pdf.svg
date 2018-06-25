@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#FFF" d="M.5.5h49v49H.5z"/>
+        <text fill="#FFF" font-family="GothamPro-Bold, Gotham Pro" font-size="18" font-weight="bold">
+            <tspan x="5" y="25">PDF</tspan>
+        </text>
+    </g>
+</svg>

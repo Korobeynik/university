@@ -673,3 +673,195 @@
 	top: 0
 	left: 0
 	z-index: 1	
+
+
+/********************* Contact ****************************/
+
+.contact
+	.email
+		color: $light-navy
+		text-transform: uppercase
+		font-size: 16px
+		font-weight: bold	
+	.mainContent__title	
+		margin-bottom: 40px
+.contact-item
+	margin-bottom: 30px
+
+.contact-item__title
+	font-size: 18px
+	font-weight: bold
+	line-height: 1.44
+	margin-bottom: 14px
+	color: $charcoal-grey
+
+.contact-item__title.requisites
+	color: $light-navy
+	text-transform: uppercase
+	font-size: 16px	
+
+.pdf-button
+	width: 288px
+	height: 106px
+	background-color: $sand
+	color: $white
+	display: flex
+	align-items: center
+	padding-left: 40px
+	&:hover
+		color: $light-navy
+		span
+			color: $light-navy
+			border-color: $light-navy
+	span
+		width: 50px
+		height: 50px
+		display: inline-block
+		border: 1px solid $white
+		font-size: 18px
+		font-weight: bold
+		text-align: center
+		line-height: 50px
+		margin-right: 20px
+
+.map
+	margin-bottom: 40px
+
+.form-title
+	text-align: center		
+
+form
+	width: 100%
+	max-width: 1015px
+	margin: 0 auto
+	margin-bottom: 40px
+	input,select
+		display: flex
+		align-items: center
+		min-width: 320px
+		height: 54px
+		border: solid 1px #113060
+		padding-left: 20px
+		margin-bottom: 30px
+		box-sizing: border-box
+	select
+		background-color: #f0f3f7
+		position: relative
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		background-image: url(../img/turn-triangle.svg)
+		background-repeat: no-repeat
+		background-position: 93% 50%
+		background-size: 10px
+		&:before
+			content: "▼"
+			display: block
+			padding: 0 8px
+			font-size: 12px
+			position: absolute
+			right: 8px
+			top: 4px
+			z-index: 1
+			text-align: center
+			width: 10%
+			height: 100%
+			pointer-events: none
+			box-sizing: border-box
+			background-color: $light-navy	
+	textarea
+		display: inline-block
+		width: 100%
+		min-height: 169px
+		padding-left: 20px
+		padding-top: 15px
+		border: solid 1px #113060
+		margin-bottom: 40px
+		resize: none
+	button.btn.btn--dark
+		background-color: #113060
+		color: #fff
+	label
+		display: flex
+		flex-direction: row-reverse
+		width: 77%
+		align-items: center
+		justify-content: flex-end
+		margin-left: 25px
+		a
+			font-weight: bold
+		
+
+
+select::-ms-expand
+	display: none
+
+.form-row
+	display: flex
+	justify-content: space-between
+	margin: 0
+
+.form-row.button-row
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+
+.label
+	display: block
+	position: relative
+	padding-left: 35px
+	margin-bottom: 12px
+	cursor: pointer
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+
+.checkmark
+	position: absolute
+	top: 0
+	left: 0
+	height: 20px
+	width: 20px
+	background-color: transparent
+	border: 1px solid $light-navy
+
+
+.label
+	&:hover input ~ .checkmark
+		background-color: $white
+	input:checked ~ .checkmark
+		background-color: $light-navy
+
+
+.checkmark:after
+	content: ""
+	position: absolute
+	display: none
+
+
+.label
+	input:checked ~ .checkmark:after
+		display: block
+	.checkmark:after
+		left: 6px
+		top: 3px
+		width: 5px
+		height: 10px
+		border: solid white
+		border-width: 0 3px 3px 0
+		-webkit-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		transform: rotate(45deg)
+
+
+
+// .gm-style div div > div + div
+//   width: 30px
+//   height: 30px
+//   background: red

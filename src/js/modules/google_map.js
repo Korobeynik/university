@@ -19,16 +19,14 @@ function init() {
         mapTypeControl: false,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(56.9472814, 24.1087857), // New York
+        center: new google.maps.LatLng(59.942493, 30.285853), // New York
 
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
-        styles: [
-            {
+        styles: [{
                 "featureType": "water",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#e9e9e9"
                     },
                     {
@@ -39,8 +37,7 @@ function init() {
             {
                 "featureType": "landscape",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#f5f5f5"
                     },
                     {
@@ -51,8 +48,7 @@ function init() {
             {
                 "featureType": "road.highway",
                 "elementType": "geometry.fill",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#ffffff"
                     },
                     {
@@ -63,8 +59,7 @@ function init() {
             {
                 "featureType": "road.highway",
                 "elementType": "geometry.stroke",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#ffffff"
                     },
                     {
@@ -78,8 +73,7 @@ function init() {
             {
                 "featureType": "road.arterial",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#ffffff"
                     },
                     {
@@ -90,8 +84,7 @@ function init() {
             {
                 "featureType": "road.local",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#ffffff"
                     },
                     {
@@ -102,8 +95,7 @@ function init() {
             {
                 "featureType": "poi",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#f5f5f5"
                     },
                     {
@@ -114,8 +106,7 @@ function init() {
             {
                 "featureType": "poi.park",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#dedede"
                     },
                     {
@@ -125,8 +116,7 @@ function init() {
             },
             {
                 "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
+                "stylers": [{
                         "visibility": "on"
                     },
                     {
@@ -139,8 +129,7 @@ function init() {
             },
             {
                 "elementType": "labels.text.fill",
-                "stylers": [
-                    {
+                "stylers": [{
                         "saturation": 36
                     },
                     {
@@ -153,17 +142,14 @@ function init() {
             },
             {
                 "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
+                "stylers": [{
+                    "visibility": "off"
+                }]
             },
             {
                 "featureType": "transit",
                 "elementType": "geometry",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#f2f2f2"
                     },
                     {
@@ -174,8 +160,7 @@ function init() {
             {
                 "featureType": "administrative",
                 "elementType": "geometry.fill",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#fefefe"
                     },
                     {
@@ -186,8 +171,7 @@ function init() {
             {
                 "featureType": "administrative",
                 "elementType": "geometry.stroke",
-                "stylers": [
-                    {
+                "stylers": [{
                         "color": "#fefefe"
                     },
                     {
@@ -211,7 +195,7 @@ function init() {
 
     var neighborhoods = [
         // Main
-        {lat: 56.9472687, lng: 24.108269, title: 'Title 1', content: 'Text text text', icon: '../img/marker.svg'}
+        { lat: 59.942493, lng: 30.285853, title: 'Title 1', content: 'Text text text', icon: 'marker.svg' }
     ];
 
     /* Info windows
@@ -220,22 +204,22 @@ function init() {
 
     function displayMarkers() {
 
-       // this variable sets the map bounds and zoom level according to markers position
-       var bounds = new google.maps.LatLngBounds();
+        // this variable sets the map bounds and zoom level according to markers position
+        var bounds = new google.maps.LatLngBounds();
 
-       // For loop that runs through the info on markersData making it possible to createMarker function to create the markers
-       for (var i = 0; i < neighborhoods.length; i++){
+        // For loop that runs through the info on markersData making it possible to createMarker function to create the markers
+        for (var i = 0; i < neighborhoods.length; i++) {
 
-          var latlng = new google.maps.LatLng(neighborhoods[i].lat, neighborhoods[i].lng);
-          var name = neighborhoods[i].title;
-          var icon = neighborhoods[i].icon;
-          var content = neighborhoods[i].content;
+            var latlng = new google.maps.LatLng(neighborhoods[i].lat, neighborhoods[i].lng);
+            var name = neighborhoods[i].title;
+            var icon = neighborhoods[i].icon;
+            var content = neighborhoods[i].content;
 
-          createMarker(latlng, name, content, icon, i * 250);
+            createMarker(latlng, name, content, icon, i * 250);
 
-          // Marker’s Lat. and Lng. values are added to bounds variable
-          bounds.extend(latlng);
-       }
+            // Marker’s Lat. and Lng. values are added to bounds variable
+            bounds.extend(latlng);
+        }
 
     }
 
@@ -243,24 +227,24 @@ function init() {
     function createMarker(latlng, title, content, icon, timeout) {
 
         window.setTimeout(function() {
-           var marker = new google.maps.Marker({
-              map: map,
-              position: latlng,
-              clickable: true,
-              icon: {
-                url: "i/" + icon
-              },
-              animation: google.maps.Animation.DROP
-           });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: latlng,
+                clickable: true,
+                icon: {
+                    url: "src/i/" + icon
+                },
+                animation: google.maps.Animation.DROP
+            });
 
-           google.maps.event.addListener(marker, 'click', function() {
-              var infoContent = '<div id="info_container">' +
-              '<h3 class="info_title">' + title + '</h3><div>' + content + '</div></div>';
+            google.maps.event.addListener(marker, 'click', function() {
+                var infoContent = '<div id="info_container">' +
+                    '<h3 class="info_title">' + title + '</h3><div>' + content + '</div></div>';
 
-              infoWindow.setContent(infoContent);
-              infoWindow.open(map, marker);
+                infoWindow.setContent(infoContent);
+                infoWindow.open(map, marker);
 
-           });
+            });
 
         }, timeout);
 
@@ -270,25 +254,25 @@ function init() {
 
     // Enable scroll zoom after click on map
     map.addListener('click', function() {
-       map.setOptions({
-           scrollwheel: true
-       });
+        map.setOptions({
+            scrollwheel: true
+        });
     });
 
 
     // Enable scroll zoom after drag on map
     map.addListener('drag', function() {
-       map.setOptions({
-           scrollwheel: true
-       });
+        map.setOptions({
+            scrollwheel: true
+        });
     });
 
 
     // Disable scroll zoom when mouse leave map
     map.addListener('mouseout', function() {
-       map.setOptions({
-           scrollwheel: false
-       });
+        map.setOptions({
+            scrollwheel: false
+        });
     });
 
 
