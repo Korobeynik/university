@@ -127,7 +127,15 @@ module.exports = {
         filename: './contact.html' ,
         template: './html/contact.html'
       }),
-  
+         new HtmlWebpackPlugin({
+        filename: './news.html' ,
+        template: './html/news.html'
+      }),
+         new HtmlWebpackPlugin({
+        filename: './news-single.html' ,
+        template: './html/news-single.html'
+      }),
+
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery'

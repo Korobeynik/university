@@ -13,8 +13,10 @@ header
 
 
 .headerBase
+	.logo
+		top: -40px
 	.mainMenu li.active:before
-		bottom: -18px
+		bottom: -6px
 	.siteName
 		color: $charcoal-grey
 	.siteLinks
@@ -24,12 +26,12 @@ header
 .header__top
 	display: flex
 	align-items: center
-	justify-content: space-between
+	justify-content: flex-end
 
 .header__middle
 	display: flex
 	align-items: center
-	justify-content: space-between
+	justify-content: flex-end
 	position: relative
 
 .mainMenu
@@ -83,6 +85,7 @@ header
 		&:last-child
 			margin-right: 0
 .siteLinks
+	margin-right: 45px
 	a
 		font-size: 16px
 		font-weight: normal
@@ -111,12 +114,12 @@ header
 .logo
 	position: relative
 	left: 0
-	top: -28px
+	top: -6px
 	width: 305px
 	min-width: 350px
 	display: block
 	img
-		width: 100%
+		width: 308px
 		max-width: 100%				 
 
 .logo--mobile,

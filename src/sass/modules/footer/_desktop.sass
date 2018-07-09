@@ -4,6 +4,7 @@
 		background-color: $gray
 
 footer
+	background-color: #f0f3f7
 	section
 		padding-bottom: 40px
 .footer__menu__all
@@ -33,7 +34,32 @@ footer
 	display: flex
 	align-items: center
 	width: 400px
-	justify-content: space-between
+	justify-content: flex-end
+
+.footer__middle
+	padding-top: 40px
+	.functionPanel
+		display: flex
+		justify-content: flex-end
+		li
+			display: inline-block
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			background-color: #113060
+			a
+				display: flex
+				align-items: center
+				justify-content: center
+
+.footer__middle__contact
+	font-size: 14px
+	color: #113060
+	padding-top: 10px
+	div
+		margin-bottom: 5px
+	a
+		font-weight: bold
 
 a.creater
 	display: flex
@@ -44,3 +70,11 @@ a.creater
 
 .footer__bottom
 	padding-bottom: 50px
+
+.footer__bottom__links
+	display: flex
+	color: #113060
+	a
+		font-weight: bold
+		display: inline-block
+		margin-right: 25px	

@@ -348,6 +348,17 @@
 
 //************************************ NEWS:  SECTION START  *************************************************//
 
+.news-single-article
+	.mainContent__title
+		font-size: 36px
+		line-height: 1.17
+		margin-bottom: 30px
+		margin-top: 15px
+	.mainContent__title__descr	
+		font-size: 18px
+		line-height: 1.67
+		color: #2f3642
+		margin-bottom: 40px
 .news__item
 	a
 		display: inline-block
@@ -359,6 +370,32 @@
 	p
 		margin-bottom: 18px		
 
+
+.article__image
+	display: inline-block
+	margin-bottom: 50px
+
+
+.article-count__list
+	counter-reset: count
+	display: flex
+	flex-wrap: wrap
+	padding: 20px 0
+	li
+		width: 50%
+		padding-left: 40px
+		counter-increment: count
+		position: relative
+		margin-bottom: 20px
+		&:before
+			content: counter(count)
+			position: absolute
+			left: 0
+			top: 0
+			font-size: 30px
+			font-weight: bold
+			color: #dcc865
+			line-height: 0.93	
 
 .news__menu
 	display: flex
@@ -415,6 +452,10 @@
 	img
 		max-width: 100%
 
+.mainContent
+	.news__item__content
+		margin-bottom: 45px
+
 .news__list__item
 	display: flex
 	margin-bottom: 26px
@@ -425,6 +466,12 @@
 .list__item__content
 	a
 		display: block
+
+.more-btn-news
+	text-align: center
+	margin-bottom: 45px
+	justify-content: center
+	display: flex
 
 
 .press__title
@@ -461,9 +508,20 @@
 
 .tw
 	padding: 55px 0
-	background-color: $azure
+	background-color: $light-navy
 	color: $white
 	position: relative
+	.press__item
+		width: 100%
+		.btn
+			min-width: 268px
+			svg
+				display: inline-block
+				margin-right: 15px
+			&:hover
+				svg
+					path
+						fill: $light-navy
 	&:before
 		content: ""
 		display: block
@@ -472,7 +530,7 @@
 		top: 0	
 		width: 200%
 		height: 100%
-		background-color: $azure
+		background-color: $light-navy
 		z-index: -1	
 	a
 		color: $white
@@ -503,7 +561,7 @@
 	margin-bottom: 40px
 
 .tw__content
-	padding-left: 25%
+	padding-left: 0
 	.tw__item__title
 		font-size: 18px
 		font-weight: bold
@@ -730,7 +788,7 @@
 .form-title
 	text-align: center		
 
-form
+#main-form
 	width: 100%
 	max-width: 1015px
 	margin: 0 auto
@@ -790,8 +848,47 @@ form
 		margin-left: 25px
 		a
 			font-weight: bold
-		
 
+.subscribe--item
+	background-color: #113060
+	color: #fff
+	text-align: center
+	padding-top: 50px
+	padding-bottom: 45px
+	.subscribe__title
+		font-size: 18px
+		font-weight: bold
+		margin: 10px 0
+	.subscribe__text
+		padding: 0 25px
+		margin-bottom: 20px	
+.subscribe__form
+	background-color: #113060
+	color: #fff
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	input,select
+		display: flex
+		align-items: center
+		min-width: 320px
+		height: 54px
+		border: solid 1px #113060
+		padding-left: 20px
+		margin-bottom: 20px
+		box-sizing: border-box
+		text-align: center
+		padding: 0
+		justify-content: center
+		color: #113060
+	.submit
+		font-size: 16px
+		font-weight: bold
+		text-transform: uppercase
+		background-color: transparent
+		border: 1px solid #fff
+		text-align: center
+		color: #fff
 
 select::-ms-expand
 	display: none
