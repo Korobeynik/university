@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="36px" viewBox="0 0 50 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>quote</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="News-Detail-DONE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Gorny-News-detail" transform="translate(-220.000000, -1982.000000)" fill="#113060" fill-rule="nonzero">
+            <g id="quote" transform="translate(220.000000, 1982.000000)">
+                <polygon id="Shape" points="0 21.6000338 10.5 21.6000338 3.49994531 36 13.9999453 36 21 21.6000338 21 0 0 0"></polygon>
+                <polygon id="Shape" points="29 0 29 21.6000338 39.5 21.6000338 32.4999453 36 42.9999453 36 50 21.6000338 50 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

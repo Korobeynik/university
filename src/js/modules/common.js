@@ -107,13 +107,18 @@ jQuery(document).ready(function(){
     });
 
     jQuery('.asideMenu li.active ul').show();
+
     jQuery('.asideMenu > li > a').on('click', function(event) {
-        if (jQuery(this).closest('li:has(ul)')) {
-            event.preventDefault();
+        var url = jQuery(this).attr('href');
+        if (jQuery(this).closest('li').find('ul')) {
             jQuery('.asideMenu li').removeClass('active');
             jQuery('.asideMenu ul').slideUp();
             jQuery(this).closest('li').addClass('active');
             jQuery(this).closest('li').find('ul').slideDown();
+            jQuery(this).closest('li').find('ul').stop(true, true);
+            return false;
+        } else {
+            jQuery(location).attr('href',url);
         }
     });
 

@@ -425,13 +425,14 @@
 		background-repeat: no-repeat
 		position: relative
 		&:before
-			content: "''"
-			color: $light-navy
-			font-size: 50px
+			content: ""
 			position: absolute
-			right: 0
+			right: -20px
 			top: 0
-			font-family: GothamPro	
+			width: 50px
+			height: 40px
+			background-image: url(../img/quote.svg)
+			background-repeat: no-repeat	
 
 .article__image
 	display: inline-block
@@ -1060,3 +1061,102 @@ select::-ms-expand
 
 /* ========================== university ============================ */
 
+.leadershipContent__grid
+	display: flex
+	flex-wrap: wrap
+
+.leadershipContent
+	.title--small
+		margin-bottom: 20px
+	p
+		margin-bottom: 20px	
+
+.leadership__item
+	border: solid 1px #dae0e9
+	color: $charcoal-grey
+	display: block
+	overflow: hidden
+	margin-bottom: 23px
+	&:hover
+		border: solid 1px $sand
+		.leadership__content
+			background-color: $sand
+		.leadership__position
+			color: #fff
+		.leadership__photo
+			background-color: transparent		
+
+.leadership__photo
+	min-height: 255px
+	width: 100%
+	background-size: 100%
+	background-position: 50% 100%
+	background-repeat: no-repeat
+	background-color: $gray	
+
+.leadership__content
+	padding: 30px 22px
+	background-color: #fff
+
+.leadership__position
+	color: $sand
+	margin-bottom: 7px
+	font-weight: bold
+	text-transform: uppercase
+.leadership__name
+	font-weight: bold
+	font-size: 18px
+	line-height: 1.67
+	color: $light-navy
+	margin-bottom: 7px
+.leadership__info
+	font-size: 14px
+	color: $charcoal-grey
+	margin-bottom: 15px
+
+.leadership__contact
+	.leadership__contact__item
+		display: flex
+		span
+			font-weight: bold
+			font-size: 14px
+			color: $light-navy
+			&:first-child
+				min-width: 83px
+				display: block
+				font-size: 14px
+				color: $charcoal-grey
+				font-weight: 400		
+
+.leader__sinlge
+	.leadership__position
+		font-size: 16px
+.leader__card
+	display: flex
+	margin-bottom: 50px
+.leader__card__image
+	min-width: 240px
+	min-height: 218px	
+	background-color: $gray
+	margin-right: 20px
+	background-size: contain
+	background-position: 50% 100%
+	background-repeat: no-repeat
+	img
+		max-width: 100%
+.leader__card__content
+	.leadership__info
+		color: $light-navy
+		font-weight: bold
+		font-size: 18px
+		margin-bottom: 8px
+	.leadership__text
+		font-size: 18px
+		line-height: 1.67
+		margin-bottom: 10px
+		color: $charcoal-grey
+	.leadership__contact__item
+		margin-bottom: 3px	
+	.leadership__contact
+		a
+			font-weight: bold				

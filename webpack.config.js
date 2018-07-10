@@ -138,6 +138,9 @@ module.exports = {
          new HtmlWebpackPlugin({
         filename: './university.html' ,
         template: './html/university.html'
+      }), new HtmlWebpackPlugin({
+        filename: './university-single.html' ,
+        template: './html/university-single.html'
       }),
 
       new webpack.ProvidePlugin({

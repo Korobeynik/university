@@ -81,14 +81,15 @@
 		display: inline-block
 		float: left
 		right: 10px
-		width: 44px
-		height: 28.66666667px
+		width: 49px
+		height: 45px
 		cursor: pointer
-		padding: 0
+		padding: 6.5px
 		z-index: 1000
 		position: absolute
 		right: 2rem
 		top: 2rem
+		background-color: $light-navy
 		span
 			-webkit-transition: 0.3s
 			-moz-transition: 0.3s
@@ -99,8 +100,8 @@
 			-moz-transition: all 0.3s ease-in-out
 			-o-transition: all 0.3s ease-in-out
 			-ms-transition: all 0.3s ease-in-out
-			background-color: $light-navy
-			width: 44px
+			background-color: #fff
+			width: 35px
 			height: 4px
 			&:before, &:after
 				-webkit-transition: 0.3s
@@ -112,8 +113,8 @@
 				-moz-transition: all 0.3s ease-in-out
 				-o-transition: all 0.3s ease-in-out
 				-ms-transition: all 0.3s ease-in-out
-				background-color: $light-navy
-				width: 44px
+				background-color: #fff
+				width: 35px
 				height: 4px
 			position: relative
 			display: inline-block
@@ -380,13 +381,14 @@
 	.copyright
 		order: 1
 		text-align: center
+		width: 100%
 	.creater
 		display: block
 		width: 100%
 		justify-content: center
 		text-align: center
 		position: relative
-		bottom: -140px	
+		bottom: -26px	
 	.footer__panel
 		flex-direction: column
 		justify-content: center
@@ -445,8 +447,58 @@
 		min-height: 170px
 	.mainContent.educationContent
 		.col-12
-			padding: 0																									
+			padding: 0
+	.footer__middle__logo
+		display: block
+		width: 100%
+		text-align: center
+		margin-bottom: 15px
+	.footer__middle__contact
+		text-align: center
+		margin-bottom: 15px
+	.footer__middle .functionPanel
+		width: 100%
+		justify-content: center
 
+	.footer__bottom__links																														
+		flex-wrap: wrap
+		justify-content: center
+		a
+			margin: 0 10px
+	.copyright
+		padding-top: 15px
+	.leader__card			
+		flex-wrap: wrap
+		.leader__card__image
+			width: 100%
+			margin-right: 0
+			margin-bottom: 15px
+	.leader__sinlge .leadership__position
+		text-align: center
+	.article-count__list li
+		width: 100%
+		padding-right: 0
+	.leadership__photo
+		background-size: 90%
+		background-position: 100% 100%
+	.breadcrumbs
+		display: none
+	.news-single-article
+		.date
+			width: 100%
+			text-align: center
+			display: block
+	.mainContent
+		padding-top: 30px	
+	.blockquote
+		flex-wrap: wrap	
+	.blockquote .blockquote-image
+		margin: 0 auto
+		margin-bottom: 20px
+	.news-table
+		min-width: 800px
+	.article-slider
+		margin-bottom: 0										
 
 @media screen and (max-width: 320px)
 	.news__menu li a

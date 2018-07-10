@@ -195,7 +195,7 @@ function init() {
 
     var neighborhoods = [
         // Main
-        { lat: 59.942493, lng: 30.285853, title: 'Title 1', content: 'Text text text', icon: 'marker.svg' }
+        { lat: 59.942493, lng: 30.285853, title: 'Title 1', content: 'Text text text 121', icon: 'marker.svg' }
     ];
 
     /* Info windows
