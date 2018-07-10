@@ -95,12 +95,11 @@
 			right: -11px
 		a
 			font-size: 14px
-		&:nth-child(1)
+			font-weight: bold
+		&:last-child
 			a
-				font-weight: bold
-		&:nth-child(2)
-			a
-				font-weight: bold		
+				font-weight: 400
+	
 
 .asideMenu
 	background-color: $gray
@@ -359,6 +358,35 @@
 		line-height: 1.67
 		color: #2f3642
 		margin-bottom: 40px
+	.news__item__title
+		margin-bottom: 15px
+	p
+		margin-bottom: 15px
+
+.news-table
+	border: solid 1px #dae0e9
+	width: 100%
+	display: flex
+	margin: 50px 0
+	.news-table__item
+		display: flex
+		flex-wrap: wrap
+		border-left: 1px solid #dae0e9
+		&:first-child
+			border-left: none
+		div
+			width: 100%
+			align-items: center
+			justify-content: center
+	.news-table__title
+		padding: 15px 20px
+		background-color: $light-navy
+		color: #fff
+	.news-table__content
+		padding: 15px 20px
+		&:nth-child(odd)
+			background-color: rgba(218,224,233, 0.4)
+			
 .news__item
 	a
 		display: inline-block
@@ -368,30 +396,102 @@
 		margin-bottom: 15px
 		display: inline-block
 	p
-		margin-bottom: 18px		
+		margin-bottom: 18px
 
+.blockquote				
+	border: solid 1px #dae0e9
+	padding: 25px 20px
+	display: flex
+	margin: 30px 0
+	color: #2f3642
+	font-size: 18px
+	line-height: 1.67
+	a
+		text-transform: uppercase
+		color: #113060
+		font-size: 14px
+		font-weight: bold
+	.text
+		margin-bottom: 12px
+	.blockquote-image
+		min-width: 142px
+		margin-right: 45px
+		width: 142px
+		height: 142px
+		background-color: #f0f3f7
+		border-radius: 50%
+		background-size: cover
+		background-position: -10% 10px
+		background-repeat: no-repeat
+		position: relative
+		&:before
+			content: "''"
+			color: $light-navy
+			font-size: 50px
+			position: absolute
+			right: 0
+			top: 0
+			font-family: GothamPro	
 
 .article__image
 	display: inline-block
 	margin-bottom: 50px
 
 
+.article-slider
+	margin-bottom: 125px
+	.owl-nav
+		position: absolute
+		left: 38px
+		top: 260px
+		transform: rotate(90deg)
+		button
+			width: 70px
+			height: 73px
+	.slider__item
+		min-width: 280px
+		height: 270px
+		padding: 0
+
+.article-single__read--more
+	margin-bottom: 50px
+
+.news-single__aside
+	.aside-title
+		text-transform: uppercase
+		color: #113060
+		margin-bottom: 20px
+	.news__item__image
+		margin-bottom: 10px
+	.news__item
+		margin-bottom: 25px				
+
 .article-count__list
 	counter-reset: count
 	display: flex
 	flex-wrap: wrap
 	padding: 20px 0
+	&.not-count
+		li
+			padding-left: 26px
+			&:before
+				content: ""
+				background-color: #dcc865
+				width: 8px
+				height: 8px
+				top: 7px	
 	li
 		width: 50%
-		padding-left: 40px
+		padding-left: 30px			
 		counter-increment: count
 		position: relative
-		margin-bottom: 20px
+		margin-bottom: 10px
+		padding-right: 15px		
 		&:before
 			content: counter(count)
 			position: absolute
 			left: 0
-			top: 0
+			top: 2px
 			font-size: 30px
 			font-weight: bold
 			color: #dcc865
@@ -958,7 +1058,5 @@ select::-ms-expand
 
 
 
-// .gm-style div div > div + div
-//   width: 30px
-//   height: 30px
-//   background: red
+/* ========================== university ============================ */
+

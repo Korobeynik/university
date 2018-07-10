@@ -134,6 +134,10 @@ module.exports = {
          new HtmlWebpackPlugin({
         filename: './news-single.html' ,
         template: './html/news-single.html'
+      }), 
+         new HtmlWebpackPlugin({
+        filename: './university.html' ,
+        template: './html/university.html'
       }),
 
       new webpack.ProvidePlugin({
