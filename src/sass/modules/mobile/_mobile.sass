@@ -201,9 +201,16 @@
 	.features__grid
 		width: 1200px
 		min-width: 1200px
-		overflow-x: scroll	
-												
+		overflow-x: scroll
 
+
+@media (max-width: 768px)
+	.faq-content .aside
+		margin-bottom: 25px
+	.promoSearch .promoTitle__name
+		line-height: initial
+	.faq__title
+		text-align: center
 
 @media screen and (max-width: 600px)
 	//Mobile Style
@@ -445,8 +452,22 @@
 		min-height: 170px
 	.mainContent.educationContent
 		.col-12
-			padding: 0																									
+			padding: 0
+	.promoSearch
+		padding: 40px 15px
+		.ask
+			flex-wrap: wrap
+			justify-content: center
+			margin: 0 -15px
+			text-align: center
+			&_info
+				margin-bottom: 16px
 
+@media (max-width: 480px)
+	.faq__item__title
+		padding: 20px 25px 65px
+		&:before
+			top: 80%
 
 @media screen and (max-width: 320px)
 	.news__menu li a

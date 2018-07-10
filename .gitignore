@@ -9,3 +9,4 @@ config.dev.local.toml
 config.dev.toml
 config.prod.toml
 package-lock.json
+.idea

@@ -117,5 +117,16 @@ jQuery(document).ready(function(){
         }
     });
 
+    ///////FAQ//////////////
+
+    $('.faq__item__title').click(function(){
+        let faqWrap = $(this).parent();
+        let itemFaqActive = faqWrap.hasClass('active');
+        $('.faq__item').removeClass('active');
+        if(!itemFaqActive){
+            faqWrap.addClass('active');
+        }
+    });
+
 
 });

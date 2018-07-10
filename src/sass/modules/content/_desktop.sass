@@ -1060,3 +1060,198 @@ select::-ms-expand
 
 /* ========================== university ============================ */
 
+/////////////////////faq///////////////////
+.promoSearch
+	width: 100%
+	padding: 0 15px
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	font-family: 'GothamPro', sans-serif
+	.promoTitle__name
+		width: 100%
+		line-height: 70px
+		margin-bottom: 22px
+	&__search
+		max-width: 912px
+		width: 100%
+		text-align: center
+		margin-bottom: 17px
+		position: relative
+		input
+			border: none
+			box-sizing: border-box
+			max-width: 912px
+			width: 100%
+			border-radius: 25px
+			background-color: #ffffff
+			padding: 14px 72px 13px 32px
+			font-size: 14px
+			line-height: 24px
+	&__btn
+		position: absolute
+		background: transparent
+		border: none
+		right: 15px
+		top: 5px
+		padding: 0
+		outline: none !important
+		img
+			width: 40px
+			height: 40px
+	&__info
+		width: 100%
+		text-align: center
+		color: $white
+		text-transform: none
+		a
+			color: $sand
+			font-weight: 600
+.faq__title
+	font-family: GothamPro, sans-serif
+	font-size: 36px
+	font-weight: 600
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.17
+	letter-spacing: normal
+	color: $light-navy
+	margin-bottom: 15px
+.faq__item
+	font-family: GothamPro, sans-serif
+	font-style: normal
+	font-stretch: normal
+	letter-spacing: normal
+	border: 1px solid $bluey-grey-2
+	margin-bottom: 20px
+	&__title
+		font-size: 18px
+		font-weight: bold
+		line-height: 1.56
+		color: $light-navy
+		padding: 21px 88px 21px 30px
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			right: 30px
+			top: 50%
+			transform: translateY(-50%)
+			width: 28px
+			height: 28px
+			background: url("../img/faq-img.svg")
+	&__description
+		display: none
+		padding: 15px 35px
+		font-size: 14px
+		line-height: 1.71
+		color: $charcoal-grey
+.faq__item.active
+	border-color: $sand
+	.faq__item__title
+		background: $sand
+		&:before
+			width: 39px
+			height: 39px
+			right: 25px
+			background: url("../img/faq-active.svg")
+	.faq__item__description
+		display: block
+.ask
+	background: $light-navy
+	padding: 35px 35px 35px 54px
+	color: $white
+	margin-bottom: 75px
+	p
+		font-size: 18px
+		font-weight: bold
+		line-height: 1.56
+	span
+		font-size: 14px
+		font-weight: normal
+		line-height: 1.71
+	.btn--ask
+		min-width: 230px
+		height: 54px
+		display: flex
+		font-weight: bold
+		align-items: center
+		justify-content: center
+		padding: 10px
+		text-align: center
+		font-size: 16px
+		color: $white
+		border: 1px solid $white
+		text-transform: uppercase
+.help_block
+	display: flex
+	font-family: GothamPro, sans-serif
+	font-size: 14px
+	font-weight: bold
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.71
+	letter-spacing: normal
+	color: $charcoal-grey
+	margin-top: 25px
+.triger
+	display: flex
+	margin-left: 20px
+.defalt[type="radio"]
+	&:checked + label:after
+		z-index: 999
+.yes[type="radio"]
+	&:checked + label:after
+		top: 2px
+		left: 30px
+	&:checked + label, &:not(:checked) + label
+		padding-left: 0
+		padding-right: 25px
+	&:checked + label:before, &:not(:checked) + label:before
+		border-radius: 8px 0 0 8px
+		border-right: 1px solid transparent
+		z-index: 1
+		left: 30px
+		top: 5px
+.no[type="radio"]
+	&:checked + label:after
+		top: 2px
+	&:checked + label, &:not(:checked) + label
+		padding-left: 30px
+	&:checked + label:before, &:not(:checked) + label:before
+		border-radius: 0 8px 8px 0
+		border-left: 1px solid transparent
+		z-index: 1
+		top: 5px
+[type="radio"]
+	&:checked, &:not(:checked)
+		position: absolute
+		left: -9999px
+	&:checked + label, &:not(:checked) + label
+		position: relative
+		padding-left: 15px
+		cursor: pointer
+		display: inline-block
+	&:checked + label:before, &:not(:checked) + label:before
+		content: ''
+		position: absolute
+		left: 0
+		top: -11px
+		width: 21px
+		height: 15px
+		border: solid 1px $bluey-grey-2
+		border-radius: 8px
+		background: #fff
+	&:checked + label:after
+		content: ''
+		width: 21px
+		height: 21px
+		background: $bluey-grey-2
+		position: absolute
+		top: -14px
+		left: 1px
+		border-radius: 50%
+		-webkit-transition: all 0.3s ease
+		transition: all 0.2s ease
+		z-index: 100
+/////////////////////faq///////////////////
