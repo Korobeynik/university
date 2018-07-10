@@ -1,28 +1,52 @@
-jQuery(document).ready(function(){
+$(document).ready(function() {
+    if ($(window).width() < 1024) {
 
-    let listArray = jQuery('.news [data-content]');
-    let linkCategory = jQuery('#news__menu__link');
-    jQuery('[data-tab]').on('click', function(event) {
+       $('.mainMenu > li').each(function() {
+        $(this).children('ul').closest('li').addClass('hasSubMenu');
+       });
+
+       $('.hasSubMenu > a span').addClass('arrow');
+
+       $('.hasSubMenu > a').click(function(event) {
+           event.preventDefault();
+           $(this).next().toggleClass('active');
+           $(this).toggleClass('selected');
+           $('.arrow').toggleClass('hidden');
+           // $('.mainMenu > li').slideUp(300);
+           // $(this).closest('li').toggleClass('on');
+       }); 
+      // $('.elementor-nav-menu .elementor-item').on('click', function(){
+      //   $('.elementor-menu-toggle').toggleClass('elementor-active');
+      // });
+    }
+});
+
+
+$(document).ready(function(){
+
+    let listArray = $('.news [data-content]');
+    let linkCategory = $('#news__menu__link');
+    $('[data-tab]').on('click', function(event) {
             event.preventDefault();
-            let dataLink = jQuery(this).attr('href');
+            let dataLink = $(this).attr('href');
             linkCategory.attr('href', dataLink);
-            let tabActive = jQuery(this).data('tab');
+            let tabActive = $(this).data('tab');
             listArray.each( function(index) {
-               if(tabActive == jQuery(this).data('content')){
+               if(tabActive == $(this).data('content')){
                    console.log(index);
-                     jQuery(this).css({
+                     $(this).css({
                          display: 'flex',
                      });
          } else  {
-            jQuery(this).css('display', 'none')
+            $(this).css('display', 'none')
          }
       });
             
-            jQuery('.news__menu li').removeClass('active');
-            jQuery(this).closest('li').addClass('active');
+            $('.news__menu li').removeClass('active');
+            $(this).closest('li').addClass('active');
     });
 
-	var owl = jQuery('.owl-carousel');
+	var owl = $('.owl-carousel');
     owl.owlCarousel({
         items:3,
         loop:true,
@@ -57,7 +81,7 @@ jQuery(document).ready(function(){
         }
     });
 
-    var owlArticleSlider = jQuery('.article-slider');
+    var owlArticleSlider = $('.article-slider');
     owlArticleSlider.owlCarousel({
         items:3,
         loop:true,
@@ -92,33 +116,33 @@ jQuery(document).ready(function(){
         }
     });
 
-    jQuery(".ninja-btn").click(function() {
-        jQuery(this).toggleClass("active");
-        jQuery(".mainMenu").toggleClass('active');
-        jQuery(".header__middle nav").toggleClass('active');
-        //jQuery("#content").toggleClass("active");
+    $(".ninja-btn").click(function() {
+        $(this).toggleClass("active");
+        $(".mainMenu").toggleClass('active');
+        $(".header__middle nav").toggleClass('active');
+        //$("#content").toggleClass("active");
     });
 
-    jQuery('#btn-video').click(function() {
-       jQuery('#exampleModalCenter').modal('show');
+    $('#btn-video').click(function() {
+       $('#exampleModalCenter').modal('show');
        console.log("Modal open");
-       jQuery('body.modal-open').css('padding', 0);
-       jQuery("body").removeClass("modal-open");
+       $('body.modal-open').css('padding', 0);
+       $("body").removeClass("modal-open");
     });
 
-    jQuery('.asideMenu li.active ul').show();
+    $('.asideMenu li.active ul').show();
 
-    jQuery('.asideMenu > li > a').on('click', function(event) {
-        var url = jQuery(this).attr('href');
-        if (jQuery(this).closest('li').find('ul')) {
-            jQuery('.asideMenu li').removeClass('active');
-            jQuery('.asideMenu ul').slideUp();
-            jQuery(this).closest('li').addClass('active');
-            jQuery(this).closest('li').find('ul').slideDown();
-            jQuery(this).closest('li').find('ul').stop(true, true);
+    $('.asideMenu > li > a').on('click', function(event) {
+        var url = $(this).attr('href');
+        if ($(this).closest('li').find('ul')) {
+            $('.asideMenu li').removeClass('active');
+            $('.asideMenu ul').slideUp();
+            $(this).closest('li').addClass('active');
+            $(this).closest('li').find('ul').slideDown();
+            $(this).closest('li').find('ul').stop(true, true);
             return false;
         } else {
-            jQuery(location).attr('href',url);
+            $(location).attr('href',url);
         }
     });
 
