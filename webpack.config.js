@@ -142,6 +142,10 @@ module.exports = {
         filename: './university-single.html' ,
         template: './html/university-single.html'
       }),
+        new HtmlWebpackPlugin({
+            filename: './faq.html' ,
+            template: './html/faq.html'
+        }),
 
       new webpack.ProvidePlugin({
         $: 'jquery',

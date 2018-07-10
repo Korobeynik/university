@@ -202,9 +202,16 @@
 	.features__grid
 		width: 1200px
 		min-width: 1200px
-		overflow-x: scroll	
-												
+		overflow-x: scroll
 
+
+@media (max-width: 768px)
+	.faq-content .aside
+		margin-bottom: 25px
+	.promoSearch .promoTitle__name
+		line-height: initial
+	.faq__title
+		text-align: center
 
 @media screen and (max-width: 600px)
 	//Mobile Style
@@ -498,7 +505,29 @@
 	.news-table
 		min-width: 800px
 	.article-slider
-		margin-bottom: 0										
+		margin-bottom: 0
+	.faq__item__title
+		padding: 20px 25px 65px
+		&:before
+			top: 80%											
+	.promoSearch
+		padding: 40px 15px
+		.ask
+			flex-wrap: wrap
+			justify-content: center
+			margin: 0 -15px
+			text-align: center
+			&_info
+				margin-bottom: 16px
+	.ask.flex
+		flex-wrap: wrap
+		text-align: center
+	.ask_info
+		padding: 0 15px
+		margin-bottom: 20px
+	.ask .btn--ask
+		min-width: 242px		
+
 
 @media screen and (max-width: 320px)
 	.news__menu li a
