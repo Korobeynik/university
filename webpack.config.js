@@ -145,11 +145,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: './faq.html' ,
             template: './html/faq.html'
-        }),
+      }),
         new HtmlWebpackPlugin({
             filename: './document.html' ,
             template: './html/document.html'
-        }),
+      }), 
+        new HtmlWebpackPlugin({
+            filename: './education-list.html' ,
+            template: './html/education-list.html'
+      }),
 
       new webpack.ProvidePlugin({
         $: 'jquery',

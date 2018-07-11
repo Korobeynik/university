@@ -120,3 +120,54 @@ a
 	position: absolute
 	right: -25px
 	top: -30px
+
+
+
+.mfp-bg
+	background-color: #000
+
+//Gallery animation 
+.mfp-ready .mfp-figure
+	opacity: 0
+
+.mfp-zoom-in
+	.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+		opacity: 0
+		-webkit-transition: all 0.3s ease-out
+		transition: all 0.3s ease-out
+		-webkit-transform: scale(0.95)
+		-ms-transform: scale(0.95)
+		transform: scale(0.95)
+	&.mfp-bg, .mfp-preloader
+		opacity: 0
+		-webkit-transition: all 0.3s ease-out
+		transition: all 0.3s ease-out
+	&.mfp-image-loaded .mfp-figure
+		opacity: 1
+		-webkit-transform: scale(1)
+		-ms-transform: scale(1)
+		transform: scale(1)
+	&.mfp-ready
+		.mfp-iframe-holder .mfp-iframe-scaler
+			opacity: 1
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+			transform: scale(1)
+		&.mfp-bg, .mfp-preloader
+			opacity: 0.8
+	&.mfp-removing
+		.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+			-webkit-transform: scale(0.95)
+			-ms-transform: scale(0.95)
+			transform: scale(0.95)
+			opacity: 0
+		&.mfp-bg, .mfp-preloader
+			opacity: 0
+
+.mfp-iframe-scaler
+	overflow: visible
+
+.mfp-zoom-out-cur
+	cursor: auto
+	.mfp-image-holder .mfp-close
+		cursor: pointer								        
