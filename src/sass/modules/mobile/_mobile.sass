@@ -32,9 +32,11 @@
 	.logo--mobile.mobile
 		display: block
 		width: 206px
-		position: static
+		position: relative
 		padding: 5px
-		padding-left: 20px
+		padding-left: 0px
+		top: 0
+		left: -15px
 		img
 			max-width: 100%
 			width: 206px
@@ -45,10 +47,40 @@
 		z-index: -1
 		transform: translateX(110%)
 		opacity: 0
-		transition: all 0.6s ease-in-out
+		transition: all 0.4s ease-in-out
 		&.active
 			transform: translateX(0%)
 			opacity: 1
+		.functionPanel--mobile
+			display: block
+			padding: 15px 20px
+			background-color: $light-navy
+			color: #fff
+			li
+				a
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 14px
+					color: #fff
+					display: flex
+					align-items: center
+					img
+						display: inline-block
+						margin-right: 5px
+		#searchMobile
+			margin-top: 15px
+			input
+				width: 100%
+				height: 48px
+				border-radius: 50px
+				display: flex
+				align-items: center
+				padding-left: 51px
+				background-image: url(../img/search-img.svg)
+				background-repeat: no-repeat
+				background-position: 4px 50%
+				border: none
+				color: $light-navy				
 	.mainMenu li.active:before
 		display: none		   
 	.mainMenu
@@ -57,7 +89,7 @@
 		background-color: #fff
 		width: 100%
 		margin-top: 0
-		box-shadow: 0 40px 50px rgba(0,0,0,0.2)
+		//box-shadow: 0 40px 50px rgba(0,0,0,0.2)
 		padding: 10px 0px
 		//display: none
 		opacity: 0
@@ -66,6 +98,8 @@
 		li
 			&.active
 				background-color: #dcc865
+				> a
+						font-weight: bold
 			&.off
 				display: none
 			&.on
@@ -601,7 +635,9 @@
 		padding: 0 15px
 		margin-bottom: 20px
 	.ask .btn--ask
-		min-width: 242px		
+		min-width: 242px
+	.document__grid .document__item
+		width: 100%			
 
 
 @media screen and (max-width: 320px)
@@ -629,4 +665,4 @@
 		min-width: 100%
 	.logo--mobile.mobile img
 		width: 180px
-		margin-left: 30px																										
+		margin-left: 60px																										

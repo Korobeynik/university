@@ -146,6 +146,10 @@ module.exports = {
             filename: './faq.html' ,
             template: './html/faq.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: './document.html' ,
+            template: './html/document.html'
+        }),
 
       new webpack.ProvidePlugin({
         $: 'jquery',

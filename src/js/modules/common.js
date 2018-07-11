@@ -132,18 +132,20 @@ $(document).ready(function(){
 
     $('.asideMenu li.active ul').show();
 
-    $('.asideMenu > li > a').on('click', function(event) {
-        var url = $(this).attr('href');
-        if ($(this).closest('li').find('ul')) {
+       $('.asideMenu > li').each(function() {
+        $(this).children('ul').closest('li').addClass('hasSubMenu');
+       });
+
+    $('.asideMenu > li.hasSubMenu > a').on('click', function(event) {
+
+            event.preventDefault();
+ 
             $('.asideMenu li').removeClass('active');
             $('.asideMenu ul').slideUp();
             $(this).closest('li').addClass('active');
-            $(this).closest('li').find('ul').slideDown();
-            $(this).closest('li').find('ul').stop(true, true);
-            return false;
-        } else {
-            $(location).attr('href',url);
-        }
+            $(this).closest('li').find('ul').stop().slideToggle();
+            //$(this).closest('li').find('ul').stop();
+  
     });
 
     ///////FAQ//////////////
