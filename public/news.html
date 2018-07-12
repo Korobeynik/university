@@ -16,31 +16,94 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="header__top">
+					<!-- <div class="siteName">The First Higher Technical University in Russia</div> -->
 					<div class="siteLinks">
 						<a href="#">Partnership</a>
 						<a href="#">UNESCO Centre</a>
 						<a href="#">Campus Life</a>
 					</div>
 					<ul class="functionPanel">
-						<li><a href="#"><img src="/img/srift.svg" alt=""></a></li>
-						<li><a href="#"><img src="/img/lang (1).svg" alt=""></a></li>
-						<li><a href="#"><img src="/img/search (1).svg" alt=""></a></li>
+						<li>
+							<a href="#" id="font">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+								    <g fill="none" fill-rule="evenodd">
+								        <circle cx="20" cy="20" r="19" stroke="#FFF" stroke-width="2"/>
+								        <text fill="#FFF" font-family="GothamPro-Bold, Gotham Pro" font-size="16" font-weight="bold">
+								            <tspan x="8.167" y="24" style="font-family: GothamPro;">Aa</tspan>
+								        </text>
+								    </g>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" id="lang">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+						    	<g fill="none" fill-rule="evenodd" stroke="#FFF">
+						        <circle class="f1" cx="20" cy="20" r="19" stroke-width="2"/>
+						        <g stroke-width="1.5" transform="translate(12 12)">
+						            <circle cx="8" cy="8" r="8"/>
+						            <ellipse cx="8" cy="8" rx="3.636" ry="8"/>
+						            <path d="M.364 5.09h15.272M.364 10.91h15.272"/>
+						        </g>
+						    	</g>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" id="search">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+								    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+								        <circle class="f1" cx="20" cy="20" r="19"/>
+								        <g transform="translate(12 11)">
+								            <circle cx="7.5" cy="7.5" r="7.5"/>
+								            <path d="M12 13l4 4"/>
+								        </g>
+								    </g>
+								</svg>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="header__middle">
-					<a href="index.html" class="logo logo--desktop"><img src="/img/university-black.svg" alt=""></a>
-					<a href="index.html" class="logo logo--mobile mobile"><img src="/img/university-black.svg" alt=""></a>
+					<a href="index.html" class="logo logo--desktop"><img src="img/university-black.svg" alt=""></a>
+					<a href="index.html" class="logo logo--mobile mobile"><img src="img/university-black.svg" alt=""></a>
 					<nav>
 						<ul class="mainMenu">
-							<li class="active"><a href="#">University</a></li>
-							<li><a href="education.html">Education</a></li>
-							<li><a href="#">Alumni</a></li>
-							<li><a href="#">Science</a></li>
-							<li><a href="#">News</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="contact.html">Contacts</a></li>
+							<li class="active">
+								<a href="#"><span>University</span></a>
+								<ul class="subMenu">
+									<li><a href="#">Strategy and mission of the University</a></li>
+									<li><a href="#">University managment</a></li>
+									<li><a href="#">History</a></li>
+									<li><a href="#">Ratings</a></li>
+									<li><a href="#">Faculties and departments</a></li>
+									<li><a href="#">Campus (infrastructure)</a></li>
+									<li><a href="#">Regulations</a></li>
+								</ul>
+							</li>
+							<li><a href="education.html"><span>Education</span></a>
+								<ul class="subMenu">
+									<li><a href="#">History</a></li>
+									<li><a href="#">Ratings</a></li>
+									<li><a href="#">Faculties and departments</a></li>
+									<li><a href="#">Campus (infrastructure)</a></li>
+									<li><a href="#">Regulations</a></li>
+								</ul>
+							</li>
+							<li><a href="#"><span>Alumni</span></a></li>
+							<li><a href="#"><span>Science</span></a></li>
+							<li><a href="#"><span>News</span></a></li>
+							<li><a href="#"><span>Services</span></a></li>
+							<li><a href="contact.html"><span>Contacts</span></a></li>
+						</ul>
+						<ul class="functionPanel--mobile">
+							<li><a href="#"><img src="img/lang (1).svg" alt="">English</a></li>
+							<li><a href="#"><img src="img/srift.svg" alt="">visually impared</a></li>
+							<form action="#" id="searchMobile">
+								<input type="text" placeholder="Поиск">
+							</form>
 						</ul>
 					</nav>
 					<a class="ninja-btn" title="menu"><span></span></a>
@@ -50,7 +113,7 @@
 	</div>
 </header>
 
-	<div class="promoTitle" style="background-image: url(../img/news.jpg);">
+	<div class="promoTitle" style="background-image:url(img/news.jpg);">
 	<h2 class="promoTitle__name">NEWS</h2>
 </div>
 <div class="container">
@@ -83,7 +146,7 @@
 		<div class="row news__item__content" data-content="1">
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -93,7 +156,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -103,7 +166,7 @@
 			<div class="col-12 col-sm-12 col-lg-4 news__list">
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -112,7 +175,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -121,7 +184,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -130,7 +193,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -139,7 +202,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -155,7 +218,7 @@
 		<div class="row news__item__content" data-content="1">
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -165,7 +228,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -174,7 +237,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -187,7 +250,7 @@
 			<div class="col-12 col-sm-12 col-lg-4 news__list">
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -196,7 +259,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -205,7 +268,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -214,7 +277,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -223,7 +286,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -233,7 +296,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -243,7 +306,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -258,7 +321,7 @@
 		<div class="row news__item__content" data-content="1">
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -268,7 +331,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -277,7 +340,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="subscribe--item">
-						<img src="/img/newsletter.svg" alt="" class="subscribe__image">
+						<img src="img/newsletter.svg" alt="" class="subscribe__image">
 					<div class="subscribe__title">Подпишитесь на рассылку</div>
 					<div class="subscribe__text">Следите за свежими новостями университета и будте в курсе последних событий</div>
 					<form action="#" class="subscribe__form">
@@ -291,7 +354,7 @@
 		<div class="row news__item__content" data-content="2">
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news 2</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -301,7 +364,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news 2</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -311,7 +374,7 @@
 			<div class="col-12 col-sm-12 col-lg-4 news__list">
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -320,7 +383,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -329,7 +392,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -338,7 +401,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -347,7 +410,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -363,7 +426,7 @@
 		<div class="row news__item__content" data-content="3">
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news 3</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -373,7 +436,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news 3</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -383,7 +446,7 @@
 			<div class="col-12 col-sm-12 col-lg-4 news__list">
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -392,7 +455,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -401,7 +464,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -410,7 +473,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -419,7 +482,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -435,7 +498,7 @@
 		<div class="row news__item__content" data-content="4">
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/talks@3x.jpg" alt="">
+					<img src="img/talks@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news 4</div>
 				<a href="#" class="news__item__title title--small">The design of the best machine learning algorithm</a>
@@ -445,7 +508,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4 news__item">
 				<a href="#" class="news__item__image">
-					<img src="/img/soveshanie@3x.jpg" alt="">
+					<img src="img/soveshanie@3x.jpg" alt="">
 				</a>
 				<div class="title--hot">hot news 4</div>
 				<a href="#" class="news__item__title title--small">UNESCO committee meeting in the Ministry of Foreign Affairs of the Russian Federation</a>
@@ -455,7 +518,7 @@
 			<div class="col-12 col-sm-12 col-lg-4 news__list">
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -464,7 +527,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -473,7 +536,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -482,7 +545,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -491,7 +554,7 @@
 				</div>
 				<div class="news__list__item">
 					<a href="#" class="list__item__image">
-						<img src="/img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
+						<img src="img/screen-shot-2018-03-19-at-18-22-31@2x.jpg" alt="">
 					</a>
 					<div class="list__item__content">
 						<a href="#"><time class="date">15.05.2018</time></a>
@@ -589,7 +652,7 @@
 			</div>
 			<div class="row footer__middle">
 				<div class="col-12 col-md-2 pl pr">
-					<a href="index.html" class="footer__middle__logo"><img src="/img/mobile-black.svg" alt=""></a>
+					<a href="index.html" class="footer__middle__logo"><img src="img/mobile-black.svg" alt=""></a>
 				</div>
 				<div class="col-12 col-md-4 footer__middle__contact">
 					<div>2, 21st Line, St Petersburg 199106, Russia</div>
@@ -597,10 +660,10 @@
 				</div>
 				<div class="col-12 col-md-6">
 					<ul class="functionPanel">
-						<li><a href="#"><img src="/img/facebook.svg" alt=""></a></li>
-						<li><a href="#"><img src="/img/vk.svg" alt=""></a></li>
-						<li><a href="#"><img src="/img/youtube.svg" alt=""></a></li>
-						<li><a href="#"><img style="width: 55%" src="/img/forpost.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/facebook.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+						<li><a href="#"><img style="width: 55%" src="img/forpost.svg" alt=""></a></li>
 					</ul>	
 				</div>
 			</div>
@@ -618,7 +681,7 @@
 						<div class="copyright">© 2008 — 2018 Saint-Petersbourg Minig University</div>
 					</div>
 					<div class="footer__panel">
-						<a href="#" class="creater"><span>Cоздание сайта —</span> <img src="/img/nuance.svg" alt=""></a>
+						<a href="#" class="creater"><span>Cоздание сайта —</span> <img src="img/nuance.svg" alt=""></a>
 					</div>
 				</div>
 			</div>

@@ -612,7 +612,10 @@
 		margin: 0 auto
 		margin-bottom: 20px
 	.news-table
-		min-width: 800px
+		width: auto
+		overflow-x: scroll
+		.news-table__item
+			min-width: 270px	
 	.article-slider
 		margin-bottom: 0
 	.faq__item__title
@@ -669,7 +672,20 @@
 			position: absolute
 			top: 0
 			background-color: #113060
-			z-index: -1								
+			z-index: -1
+	.row-mobile
+		width: 800px
+		overflow-x: scroll
+		display: flex
+		flex-wrap: nowrap
+	.aside-title.news__item__title.title--small
+		font-size: 26px
+		text-align: center
+	.article-single__read--more-wrap
+		.mainContent__title
+			width: 100%
+			text-align: center		
+
 
 
 @media screen and (max-width: 320px)
