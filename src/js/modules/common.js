@@ -27,6 +27,25 @@ $(document).ready(function(){
       });
     };
 
+    //$('.popup').magnificPopup();
+
+    $('.popup').magnificPopup({
+        type: 'image',
+        gallery:{
+          enabled:true
+        }
+      });
+
+    $('.gallery').each(function() { // the containers for all your galleries
+      $(this).magnificPopup({
+          delegate: 'a', // the selector for gallery item
+          type: 'image',
+          gallery: {
+            enabled:true
+          }
+      });
+    });
+
       //Galerry
     $(".gallery--init").each(function() {
       $(this).magnificPopup({
@@ -166,6 +185,8 @@ $(document).ready(function(){
     });
 
     $('.asideMenu li.active ul').show();
+
+    $('.asideMenu ul li.active').closest('ul').show();
 
        $('.asideMenu > li').each(function() {
         $(this).children('ul').closest('li').addClass('hasSubMenu');

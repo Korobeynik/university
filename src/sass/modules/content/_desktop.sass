@@ -118,7 +118,12 @@
 				background-color: $light-navy	
 		ul
 			padding-top: 10px
-			display: none	
+			display: none
+			li
+				&.active
+					a
+						color: #fff
+						background-color: $light-navy
 			a
 				font-size: 16px
 				display: block
@@ -1435,3 +1440,174 @@ select::-ms-expand
 				z-index: 11
 				border: 15px solid transparent
 				border-top: 15px solid #fff
+
+.educationContent__list__grid
+.educationContent__list__item
+	position: relative
+	border: 1px solid $bluey-grey-2
+	padding: 20px 23px
+	font-weight: bold
+	color: #113060
+	line-height: 1.5
+	margin-bottom: 20px
+	width: 49%
+	display: flex
+	align-items: center
+	background-color: #fff
+	flex-wrap: wrap
+	&:before
+		content: ""
+		display: block
+		width: 8px
+		height: 100%
+		background-color: $sand
+		position: absolute
+		right: 0
+		top: 0	
+	&:hover
+		background-color: $sand
+		&:before
+			background-color: #113060
+		.data
+			color: #fff
+	.data
+		font-size: 16px
+		color: $sand
+		margin-bottom: 8px
+		width: 100%
+	.faculty__name
+		color: #113060
+		width: 100%	
+
+/*==================== gallery =======================*/	
+
+.gallery
+	display: none
+
+.galleryContent__main
+	margin-bottom: 20px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.galleryContent__main__item
+	width: 100%
+	min-height: 370px
+	max-height: 370px
+	text-align: right
+	background-size: contain
+	background-position: 100% 0
+	position: relative
+	display: flex
+	align-items: center
+	padding-left: 60px
+	margin-bottom: 22px
+	&:before
+		content: ""
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: linear-gradient(90deg,#113060 0,#113060 1%,#113060 0%,#113060 21%,#113060 31%,rgba(17,48,96,.87) 41%,rgba(17,48,96,.54) 55%,rgba(17,48,96,-0.86) 80%,rgba(17,48,96,0))
+		z-index: 1	
+	.main__item__content
+		position: relative
+		z-index: 10
+		color: #fff
+		width: 38%
+		text-align: left
+		.galleryContent__text
+			font-weight: bold
+			font-size: 18px
+			color: #fff
+			line-height: 1.56
+			margin-bottom: 8px
+		.galleryContent__data
+			color: #dcc865
+			font-weight: bold
+			font-size: 14px
+			margin-bottom: 25px
+
+.count__item
+	font-size: 14px
+	font-weight: bold
+	display: flex
+	align-items: center
+	margin-bottom: 15px
+	div
+		margin-right: 5px
+		text-align: center
+	.foto
+		background-image: url(../img/count-foto.svg)
+		background-position: 50% 30%
+		width: 34px
+		height: 40px
+		background-repeat: no-repeat
+		display: flex
+		align-items: center
+		justify-content: center
+	.video
+		width: 50px
+		height: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-image: url(../img/video.svg)
+		background-position: 90% 50%
+		background-repeat: no-repeat
+
+.galleryContent__item
+	display: block
+	width: 31.5%
+	border: solid 1px #dae0e9
+	margin-bottom: 20px
+	&:hover
+		.galleryContent__item__image
+			background-color: #113060
+			img
+				filter: grayscale(100%)
+				opacity: 0.3
+			&:before
+				//opacity: 1
+			.count__item
+				opacity: 1
+				z-index: 10	
+.galleryContent__item__image
+	position: relative
+	min-height: 180px
+	height: 200px
+	&:before
+		content: ""
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		z-index: 1
+		background-color: rgba(17, 48, 96, 0.6)
+		opacity: 0
+	.count__item
+		position: absolute
+		left: 15px
+		bottom: 10px
+		color: #fff
+		opacity: 0
+		margin: 0	
+	img
+		height: 100%
+.galleryContent__item__content
+	padding: 22px
+	padding-bottom: 30px
+.galleryContent__item__text						
+	background-color: #fff
+	color: #113060
+	font-size: 14px
+	font-weight: bold
+	margin-bottom: 50px
+.galleryContent__item__data
+	color: #dcc865
+	font-weight: bold
+	font-size: 14px

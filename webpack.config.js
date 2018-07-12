@@ -154,6 +154,10 @@ module.exports = {
             filename: './education-list.html' ,
             template: './html/education-list.html'
       }),
+        new HtmlWebpackPlugin({
+            filename: './gallery.html' ,
+            template: './html/gallery.html'
+      }),
 
       new webpack.ProvidePlugin({
         $: 'jquery',
