@@ -11,25 +11,49 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 </head>
 <body class="home">
+
 	<div class="jumbotron">
-		<img src="/img/bg_header.jpg" alt="" class="jumbotron_bg jumbotron_bg--desktop">
-		<img src="/img/mobile/01.png" alt="" class="jumbotron_bg jumbotron_bg--mobile">
+		<!-- <img src="/img/bg_header.jpg" alt="" class="jumbotron_bg jumbotron_bg--desktop">
+		<img src="/img/mobile/01.png" alt="" class="jumbotron_bg jumbotron_bg--mobile"> -->
 		<%= require('html-loader!./modules/header/header-home.html') %>
-		<div class="container">
-			<div class="col-12">
-				<div class="jumbotron__content">
-					<h1 class="jumbotron__text title--bold"><span>Feel the spirit</span>of Russian Education</h1>
+		<div class="jumbotron__slider owl-carousel">
+
+			<div class="jumbotron__slider__item">
+				<img class="jumbotron__slider__image" src="/img/bitmap@3x.jpg" alt="">
+				<div class="container">
+					<div class="col-12">
+						<div class="jumbotron__content">
+							<h1 class="jumbotron__text title--bold"><span>Feel the spirit</span>of Russian Education</h1>
+							<div id="btn-video" class="jumbotron__video"  data-toggle="modal" data-target="#exampleModalCenter">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="27" viewBox="0 0 20 27">
+									<path fill="#FFF" fill-rule="evenodd" d="M20 13.5L0 27V0z"/>
+							</svg>
+							<span>whatch the film</span>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-12">
-				<div id="btn-video" class="jumbotron__video"  data-toggle="modal" data-target="#exampleModalCenter">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="27" viewBox="0 0 20 27">
-							<path fill="#FFF" fill-rule="evenodd" d="M20 13.5L0 27V0z"/>
-					</svg>
-					<span>whatch the film</span>
+
+			<div class="jumbotron__slider__item">
+				<img class="jumbotron__slider__image" src="/img/bitmap@3x.jpg" alt="">
+				<div class="container">
+					<div class="col-12">
+						<div class="jumbotron__content">
+							<h1 class="jumbotron__text title--bold"><span>Feel the spirit</span>of Russian Education</h1>
+							<div id="btn-video" class="jumbotron__video"  data-toggle="modal" data-target="#exampleModalCenter">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="27" viewBox="0 0 20 27">
+									<path fill="#FFF" fill-rule="evenodd" d="M20 13.5L0 27V0z"/>
+							</svg>
+							<span>whatch the film</span>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
+
 		</div>
+
 	</div>
 
 	<%= require('html-loader!./modules/content/content.html') %>

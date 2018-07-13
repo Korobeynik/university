@@ -6,18 +6,57 @@
 	background-position: 100% 75%
 	position: relative
 	padding: 0
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		background: linear-gradient(90deg,#113060,#113060 1%,#113060 0,#113060 21%,#113060 31%,rgba(17,48,96,.87) 41%,rgba(17,48,96,.54) 55%,rgba(17,48,96,0) 80%,rgba(17,48,96,0))	
 
 .jumbotron_bg
 	position: absolute
 	width: 100%
 	height: 100%
 
+.jumbotron__slider
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+
+.jumbotron__slider__item
+	position: relative
+	height: 692px
+	width: 100%
+	left: 0
+	top: 0
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: 100% top
+
+.jumbotron__slider.owl-carousel
+	.jumbotron__slider__image
+		display: block
+		width: 60%
+		height: 692px
+		position: absolute
+		right: 0
+		top: 0
+
 .jumbotron__content
 	position: relative
-	z-index: 1
-	width: 50%
-	padding-top: 3%
-	margin-bottom: 5%
+	z-index: 11
+	width: 100%
+	display: flex
+	align-items: flex-start
+	height: 692px
+	flex-wrap: wrap
+	flex-direction: column
+	justify-content: center
 
 
 .jumbotron__text
@@ -26,6 +65,10 @@
 	font-weight: bold
 	color: $white
 	text-transform: uppercase
+	width: 70%
+	padding-left: 250px
+	margin-bottom: 55px
+	padding-top: 20%
 	span
 		font-size: 36px
 		font-weight: 300
@@ -197,6 +240,7 @@
 	background-image: url(../img/bitmap.png)
 	background-repeat: no-repeat
 	background-position: 	185% 100%
+	z-index: 11
 	.name,.features__title
 		font-size: 14px
 		font-weight: bold

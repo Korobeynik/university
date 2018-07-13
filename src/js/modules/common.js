@@ -170,6 +170,19 @@ $(document).ready(function(){
         }
     });
 
+    var owlArticleSlider = $('.jumbotron__slider');
+    owlArticleSlider.owlCarousel({
+        items:1,
+        loop: true,
+        margin: 0,
+        smartSpeed: 500,
+        autoplay:false,
+        autoplayTimeout:5000,
+        nav: true,
+        autoplayHoverPause:true,
+        responsiveClass:true
+    });
+
     $(".ninja-btn").click(function() {
         $(this).toggleClass("active");
         $(".mainMenu").toggleClass('active');
