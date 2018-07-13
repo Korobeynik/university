@@ -1,20 +1,11 @@
 .jumbotron
 	width: 100%
 	min-height: 692px
-	//background-image: url(../img/bg_header.png)
 	background-repeat: no-repeat
 	background-position: 100% 75%
 	position: relative
 	padding: 0
-	&:before
-		content: ""
-		position: absolute
-		left: 0
-		top: 0
-		width: 100%
-		height: 100%
-		z-index: 0
-		background: linear-gradient(90deg,#113060,#113060 1%,#113060 0,#113060 21%,#113060 31%,rgba(17,48,96,.87) 41%,rgba(17,48,96,.54) 55%,rgba(17,48,96,0) 80%,rgba(17,48,96,0))	
+	margin: 0
 
 .jumbotron_bg
 	position: absolute
@@ -27,6 +18,32 @@
 	top: 0
 	width: 100%
 	height: 100%
+	.owl-nav
+		position: absolute
+		left: 19.4%
+		top: 300px
+		z-index: 10
+		button
+			display: block
+			width: 104px
+			height: 90px
+			border: solid 1px #3a5b8e !important
+			color: $light-navy
+			&:hover
+				cursor: pointer
+				span
+					color: $sand
+			&:focus
+				outline: none		
+			span
+				font-size: 40px
+				width: 20px
+				height: 25px
+				line-height: 20px
+				color: #fff
+		&.owl-next
+			border-top: none !important
+
 
 .jumbotron__slider__item
 	position: relative
@@ -34,9 +51,7 @@
 	width: 100%
 	left: 0
 	top: 0
-	background-size: contain
-	background-repeat: no-repeat
-	background-position: 100% top
+	background: linear-gradient(90deg,#113060,#113060 1%,#113060 0,#113060 40%,#113060 0,rgba(17,48,96,.87) 45%,rgba(17,48,96,.54) 50%,rgba(17,48,96,0) 70%,rgba(17,48,96,0))
 
 .jumbotron__slider.owl-carousel
 	.jumbotron__slider__image
@@ -46,6 +61,8 @@
 		position: absolute
 		right: 0
 		top: 0
+		z-index: -100
+
 
 .jumbotron__content
 	position: relative
@@ -66,9 +83,10 @@
 	color: $white
 	text-transform: uppercase
 	width: 70%
-	padding-left: 250px
+	padding-left: 180px
 	margin-bottom: 55px
 	padding-top: 20%
+	opacity: 0
 	span
 		font-size: 36px
 		font-weight: 300
@@ -150,7 +168,7 @@
 		font-size: 16px
 	> li
 		> a
-			font-weight: bold
+			font-weight: 500
 			padding: 14px 25px 15px 25px
 			display: block
 			width: 100%
@@ -160,7 +178,7 @@
 				color: $white
 				background-color: $light-navy	
 		ul
-			padding-top: 10px
+			//padding-top: 10px
 			display: none
 			li
 				&.active
@@ -368,6 +386,9 @@
 		display: inline-block
 		transform: rotate(90deg)					
 
+button.owl-prev
+	position: relative
+	bottom: -1px
 
 .slider
 	margin-top: 45px
@@ -378,11 +399,16 @@
 .slider--wrap
 	width: 1050px
 
+main.baseSection.news-single.mainContent
+	.slider .owl-nav button span
+		font-size: 33px	
+
 //************************************ PROGRAMS SECTION END  *************************************************//
 
 .museum
 	background-size: cover
 	background-position: bottom center
+	padding-top: 0
 
 .museum__title
 	margin-bottom: 30px
@@ -392,9 +418,65 @@
 	line-height: 1.67
 	margin-bottom: 30px	
 
+.museum__slider
+	.owl-nav
+		position: absolute
+		left: 18.7%
+		top: 80px
+		z-index: 10
+		button
+			display: block
+			width: 104px
+			height: 90px
+			border: solid 1px #3a5b8e !important
+			color: $light-navy
+			&:hover
+				cursor: pointer
+				span
+					color: $sand
+			&:focus
+				outline: none		
+			span
+				font-size: 40px
+				width: 20px
+				height: 25px
+				line-height: 20px
+				color: #fff
+		&.owl-next
+			border-top: none !important
+
+.museum__slider__item
+	position: relative
+	height: 480px
+	width: 100%
+	left: 0
+	top: 0
+	background: linear-gradient(90deg,#113060,#113060 1%,#113060 0,#113060 40%,#113060 0,rgba(17,48,96,.87) 45%,rgba(17,48,96,.54) 50%,rgba(17,48,96,0) 70%,rgba(17,48,96,0))
+	.container
+		height: 100%
+		display: flex
+		padding-top: 80px
+		.row
+			padding-left: 160px
+
+.museum__slider.owl-carousel
+	.museum__slider__image
+		display: block
+		width: 60%
+		height: 480px
+		position: absolute
+		right: 0
+		top: 0
+		z-index: -100
+
+
 
 
 //************************************ NEWS:  SECTION START  *************************************************//
+
+
+.news
+	padding-top: 0
 
 .news-single-article
 	.mainContent__title
@@ -521,6 +603,7 @@
 	display: flex
 	flex-wrap: wrap
 	padding: 20px 0
+	padding-top: 0
 	&.not-count
 		li
 			padding-left: 26px
@@ -584,6 +667,8 @@
 
 .news-top-line
 	margin-bottom: 30px
+	.mainContent__title
+		margin-bottom: 0
 
 .news__item__image
 	display: block
@@ -729,8 +814,8 @@
 	font-size: 36px
 	text-transform: uppercase
 	color: $light-navy
-	font-weight: bold
-	margin-bottom: 22px
+	font-weight: 500
+	margin-bottom: 15px
 .mainContent__description
 	font-size: 18px
 	margin-bottom: 35px
@@ -938,6 +1023,15 @@
 .form-title
 	text-align: center		
 
+::-webkit-input-placeholder
+	color: #8b9cb6
+
+::-moz-placeholder
+	color: #8b9cb6
+
+::-ms-input-placeholder	
+	color: #8b9cb6
+
 #main-form
 	width: 100%
 	max-width: 1015px
@@ -962,6 +1056,8 @@
 		background-repeat: no-repeat
 		background-position: 93% 50%
 		background-size: 10px
+		border-radius: 0px
+		color: #8b9cb6
 		&:before
 			content: "▼"
 			display: block
@@ -996,6 +1092,7 @@
 		align-items: center
 		justify-content: flex-end
 		margin-left: 25px
+		margin-top: 10px
 		a
 			font-weight: bold
 
@@ -1413,6 +1510,23 @@ select::-ms-expand
 		transition: all 0.2s ease
 		z-index: 100
 
+.no[type="radio"]
+	&:checked + label:before, &:not(:checked) + label:before
+		border-left: none
+		width: 26px
+		left: -3px
+.yes[type="radio"]
+	&:checked + label:before, &:not(:checked) + label:before
+		border-right: none
+		left: 32px
+		width: 27px
+.defalt[type=radio]:checked+label:after
+	left: 2px
+[type=radio]:checked + label:after
+	width: 20px
+	height: 20px
+	left: 3px		
+
 /*=======================  Search document content page  ===========================*/
 .document__grid
 	display: flex
@@ -1510,6 +1624,7 @@ select::-ms-expand
 		top: 0	
 	&:hover
 		background-color: $sand
+		border: 1px solid transparent
 		&:before
 			background-color: #113060
 		.data
@@ -1655,3 +1770,28 @@ select::-ms-expand
 	color: #dcc865
 	font-weight: bold
 	font-size: 14px
+
+
+/*  Map  */
+#info_container
+	width: 100%
+	padding-left: 17px
+	padding-top: 10px
+	text-align: center
+
+.info_title
+	font-size: 16px
+	font-weight: bold
+	text-transform: uppercase
+	color: #113060
+	margin-bottom: 5px
+	font-family: GothamPro
+
+.info_content
+	color: #2f3642
+	font-size: 14px
+	font-family: GothamPro	
+
+.info_image
+	display: block
+	margin-bottom: 15px

@@ -36,7 +36,6 @@
 		padding: 5px
 		padding-left: 0px
 		top: 0
-		left: -15px
 		img
 			max-width: 100%
 			width: 206px
@@ -270,7 +269,8 @@
 	.slider--wrap
 		width: 100%
 	.jumbotron__content
-		width: 100%
+		width: 97%
+		display: block
 	.study__lineament
 		text-align: center	
 	.study__lineament__item 
@@ -350,6 +350,8 @@
 	.jumbotron__text
 		font-size: 38px
 		text-align: center
+		padding-left: 0
+		margin-bottom: 0
 	.jumbotron__text span
 		font-size: 28px
 	.jumbotron__video
@@ -433,8 +435,7 @@
 	.news-top-line
 		margin-bottom: 10px	
 	.museum
-		background-image: url(../img/mobile/03.png) !important
-		padding-top: 55%
+		//padding-top: 55%
 
 	button.owl-dot
 		display: inline-block
@@ -684,11 +685,55 @@
 	.article-single__read--more-wrap
 		.mainContent__title
 			width: 100%
-			text-align: center		
+			text-align: center
+	.jumbotron__slider .owl-nav
+		display: none
+	.jumbotron__slider.owl-carousel .jumbotron__slider__image
+		width: 100%
+		height: auto		
+	.jumbotron__slider__item
+		background: linear-gradient(0deg,#113060,#113060 1%,#113060 0,#113060 48%,#113060 0,rgba(17,48,96,.87) 45%,rgba(17,48,96,.54) 50%,rgba(17,48,96,0) 70%,rgba(17,48,96,0))
+	.jumbotron__slider
+		.owl-dots
+			position: absolute
+			bottom: 0px
+			left: 50%
+			transform: translateX(-50%)
+			.owl-dot
+				background-color: #fff !important
+	.museum__slider__item .container .row
+		padding-left: 0
+	.museum__slider	
+		.owl-nav
+			display: none
+		.owl-dots
+			position: absolute
+			bottom: 10px
+			left: 50%
+			transform: translateX(-50%)
+			.owl-dot
+				background-color: #fff !important					
+	.museum__slider__item
+		padding-top: 130px
+		height: 580px
+		background: linear-gradient(0deg,#113060,#113060 1%,#113060 0,#113060 65%,#113060 0,rgba(17,48,96,.87) 68%,rgba(17,48,96,.54) 71%,rgba(17,48,96,0) 75%,rgba(17,48,96,0))
+	.museum__slider.owl-carousel .museum__slider__image
+		width: 100%
+		height: auto
 
-
+	header
+		z-index: 25
+	.press
+		.tw
+			.press__title
+				margin-bottom: 0
+			.press__item__title
+				margin-bottom: 15px			
+					
 
 @media screen and (max-width: 320px)
+	.jumbotron__slider__item
+		background: linear-gradient(0deg,#113060,#113060 1%,#113060 0,#113060 55%,#113060 0,rgba(17,48,96,.87) 57%,rgba(17,48,96,.54) 60%,rgba(17,48,96,0) 70%,rgba(17,48,96,0))
 	.news__menu li a
 		font-size: 12px
 	section
@@ -713,4 +758,8 @@
 		min-width: 100%
 	.logo--mobile.mobile img
 		width: 180px
-		margin-left: 60px																										
+		margin-left: 60px
+	.museum__slider .owl-dots
+		bottom: -10px	
+	.museum__slider__item
+		background: linear-gradient(0deg,#113060,#113060 1%,#113060 0,#113060 70%,#113060 0,rgba(17,48,96,.87) 70%,rgba(17,48,96,.54) 73%,rgba(17,48,96,0) 75%,rgba(17,48,96,0))																											

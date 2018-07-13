@@ -1,5 +1,6 @@
 $(document).ready(function() {
     if ($(window).width() < 1024) {
+      $(".press__title.title--bold").find('br').remove();
        $('.mainMenu > li').each(function() {
         $(this).children('ul').closest('li').addClass('hasSubMenu');
        });
@@ -27,7 +28,6 @@ $(document).ready(function(){
       });
     };
 
-    //$('.popup').magnificPopup();
 
     $('.popup').magnificPopup({
         type: 'image',
@@ -170,8 +170,31 @@ $(document).ready(function(){
         }
     });
 
-    var owlArticleSlider = $('.jumbotron__slider');
-    owlArticleSlider.owlCarousel({
+    $('.jumbotron__text').addClass('animated fadeInUp');
+
+    var owljumbotronSlider = $('.jumbotron__slider');
+    owljumbotronSlider.owlCarousel({
+        animateOut: 'slideOutDown',
+        animateIn: 'fadeIn',
+        items:1,
+        loop: true,
+        margin: 0,
+        smartSpeed: 500,
+        autoplay:false,
+        autoplayTimeout:5000,
+        nav: true,
+        autoplayHoverPause:true,
+        responsiveClass:true
+    }).on('translate.owl.carousel', function() {
+       $(this).find('.jumbotron__text').removeClass('animated fadeInUp');
+    }).on('translated.owl.carousel', function() {
+       $(this).find('.jumbotron__text').addClass('animated fadeInUp');
+    });
+
+    var museum__slider = $('.museum__slider');
+    museum__slider.owlCarousel({
+        animateOut: 'slideOutDown',
+        animateIn: 'fadeIn',
         items:1,
         loop: true,
         margin: 0,
@@ -187,7 +210,6 @@ $(document).ready(function(){
         $(this).toggleClass("active");
         $(".mainMenu").toggleClass('active');
         $(".header__middle nav").toggleClass('active');
-        //$("#content").toggleClass("active");
     });
 
     $('#btn-video').click(function() {
@@ -206,18 +228,13 @@ $(document).ready(function(){
        });
 
     $('.asideMenu > li.hasSubMenu > a').on('click', function(event) {
-
-            event.preventDefault();
- 
-            $('.asideMenu li').removeClass('active');
-            $('.asideMenu ul').slideUp();
-            $(this).closest('li').addClass('active');
-            $(this).closest('li').find('ul').stop().slideToggle();
-            //$(this).closest('li').find('ul').stop();
-  
+      event.preventDefault();
+      $('.asideMenu li').removeClass('active');
+      $('.asideMenu ul').slideUp();
+      $(this).closest('li').addClass('active');
+      $(this).closest('li').find('ul').stop().slideToggle();
     });
 
-    ///////FAQ//////////////
 
     $('.faq__item__title').click(function(){
         let faqWrap = $(this).parent();
