@@ -1032,6 +1032,9 @@ main.baseSection.news-single.mainContent
 ::-ms-input-placeholder	
 	color: #8b9cb6
 
+::-webkit-textarea-placeholder
+	color: #8b9cb6	
+
 #main-form
 	width: 100%
 	max-width: 1015px
@@ -1046,6 +1049,7 @@ main.baseSection.news-single.mainContent
 		padding-left: 20px
 		margin-bottom: 30px
 		box-sizing: border-box
+		border-radius: 0px
 	select
 		background-color: #f0f3f7
 		position: relative
@@ -1136,6 +1140,11 @@ main.baseSection.news-single.mainContent
 		border: 1px solid #fff
 		text-align: center
 		color: #fff
+	textarea
+		display: block
+		width: 100%
+		margin-bottom: 20px
+		height: 60px	
 
 select::-ms-expand
 	display: none
@@ -1409,7 +1418,7 @@ select::-ms-expand
 			right: 25px
 			background: url("../img/faq-active.svg")
 	.faq__item__description
-		display: block
+		//display: block
 .ask
 	background: $light-navy
 	padding: 35px 35px 35px 54px
@@ -1795,3 +1804,47 @@ select::-ms-expand
 .info_image
 	display: block
 	margin-bottom: 15px
+
+
+.jumbotron__slider 
+	.owl-nav
+		left: 0
+.museum__slider 
+	.owl-nav
+		left: 0	
+
+.study__lineament
+	.slick-arrow
+		display: none !important	
+
+#askPopup
+	display: none
+
+.mfp-content
+	#askPopup
+		display: block
+		margin: 0 auto
+		position: relative
+		width: 100%
+		max-width: 600px
+		margin: 0 auto
+	.subscribe--item
+		width: 100%
+		max-width: 600px
+		position: relative
+		margin: 0 auto
+	.subscribe__form
+		width: 320px
+		margin: 0 auto
+		textarea
+			padding: 15px
+			color: #113060
+			height: 70px
+		input
+			padding: 15px
+			text-align: left
+			border-radius: 0px	
+
+.mfp-close-btn-in .mfp-close
+	color: #fff
+	opacity: 1								

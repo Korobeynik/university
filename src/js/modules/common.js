@@ -1,4 +1,37 @@
+$(window).on('load', function () {
+  dotPosition();
+  function dotPosition() {
+      let windowWidth = $(window).width();
+      let containerWidth = $('.jumbotron__content').width();
+      let containerWidth2 = $('.museum .container').width();
+      let leftPos = (windowWidth-containerWidth)/2;
+      let leftPos2 = (windowWidth-containerWidth2)/2;
+
+      $('.jumbotron__slider .owl-nav').css('marginLeft', leftPos);
+      $('.museum__slider .owl-nav').css('marginLeft', leftPos2);
+
+    }
+ });
+
 $(document).ready(function() {
+
+    $(window).resize(function() {
+      dotPosition();
+    });
+    
+    function dotPosition() {
+      let windowWidth = $(window).width();
+      let containerWidth = $('.jumbotron__content').width();
+      let containerWidth2 = $('.museum .container').width();
+      let leftPos = (windowWidth-containerWidth)/2;
+      let leftPos2 = (windowWidth-containerWidth2)/2;
+
+      $('.jumbotron__slider .owl-nav').css('marginLeft', leftPos);
+      $('.museum__slider .owl-nav').css('marginLeft', leftPos2);
+
+    }
+
+
     if ($(window).width() < 1024) {
       $(".press__title.title--bold").find('br').remove();
        $('.mainMenu > li').each(function() {
@@ -28,7 +61,8 @@ $(document).ready(function(){
       });
     };
 
-
+    $('.popupModal').magnificPopup();
+    
     $('.popup').magnificPopup({
         type: 'image',
         gallery:{
@@ -206,6 +240,26 @@ $(document).ready(function(){
         responsiveClass:true
     });
 
+     $('.study__lineament').slick({
+        dots: false,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        verticalSwiping: true,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              vertical: false,
+              dots: true
+            }
+          }
+        ]
+      });
+
     $(".ninja-btn").click(function() {
         $(this).toggleClass("active");
         $(".mainMenu").toggleClass('active');
@@ -237,12 +291,10 @@ $(document).ready(function(){
 
 
     $('.faq__item__title').click(function(){
-        let faqWrap = $(this).parent();
-        let itemFaqActive = faqWrap.hasClass('active');
-        $('.faq__item').removeClass('active');
-        if(!itemFaqActive){
-            faqWrap.addClass('active');
-        }
+        //$('.faq__item__description').stop().slideToggle();
+        $(this).closest('.faq__item').toggleClass('active');
+        $(this).closest('.faq__item').find('.faq__item__description').slideToggle();
+
     });
 
 
