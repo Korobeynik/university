@@ -479,20 +479,37 @@ main.baseSection.news-single.mainContent
 	padding-top: 0
 
 .news-single-article
-	.mainContent__title
+	h3
 		font-size: 36px
 		line-height: 1.17
 		margin-bottom: 30px
 		margin-top: 15px
-	.mainContent__title__descr	
+	strong	
 		font-size: 18px
 		line-height: 1.67
 		color: #2f3642
 		margin-bottom: 40px
+		font-weight: 400
 	.news__item__title
 		margin-bottom: 15px
 	p
 		margin-bottom: 15px
+		+ img
+				margin-bottom: 50px
+
+table
+	border: 1px solid #dae0e9
+	tr
+		&:nth-child(odd)
+	    background-color: rgba(218,224,233,.4)
+		&:first-child
+			td
+				background-color: $light-navy
+				color: #fff
+	td
+		padding: 15px 20px
+		border: 1px solid #dae0e9
+
 
 .news-table
 	border: solid 1px #dae0e9
@@ -598,37 +615,64 @@ main.baseSection.news-single.mainContent
 	.news__item
 		margin-bottom: 25px				
 
-.article-count__list
-	counter-reset: count
-	display: flex
-	flex-wrap: wrap
-	padding: 20px 0
-	padding-top: 0
-	&.not-count
+.news-single-article
+	ol
+		counter-reset: count
+		display: flex
+		flex-wrap: wrap
+		padding: 20px 0
+		padding-top: 0
+		&.not-count
+			li
+				padding-left: 26px
+				&:before
+					content: ""
+					background-color: #dcc865
+					width: 8px
+					height: 8px
+					top: 7px	
 		li
+			width: 50%
+			padding-left: 30px			
+			counter-increment: count
+			position: relative
+			margin-bottom: 10px
+			padding-right: 15px
+			list-style-type: none		
+			&:before
+				content: counter(count)
+				position: absolute
+				left: 0
+				top: 2px
+				font-size: 30px
+				font-weight: bold
+				color: #dcc865
+				line-height: 0.93	
+
+.news-single-article
+	ul
+		counter-reset: count
+		display: flex
+		flex-wrap: wrap
+		padding: 20px 0
+		padding-top: 0
+		li
+			width: 50%		
+			counter-increment: count
+			position: relative
+			margin-bottom: 10px
+			padding-right: 15px
+			list-style-type: none
 			padding-left: 26px
 			&:before
 				content: ""
+				display: block
 				background-color: #dcc865
+				position: absolute
+				left: 0
 				width: 8px
 				height: 8px
 				top: 7px	
-	li
-		width: 50%
-		padding-left: 30px			
-		counter-increment: count
-		position: relative
-		margin-bottom: 10px
-		padding-right: 15px		
-		&:before
-			content: counter(count)
-			position: absolute
-			left: 0
-			top: 2px
-			font-size: 30px
-			font-weight: bold
-			color: #dcc865
-			line-height: 0.93	
 
 .news__menu
 	display: flex
@@ -810,7 +854,7 @@ main.baseSection.news-single.mainContent
 .educationContent
 
 
-.mainContent__title
+h3
 	font-size: 36px
 	text-transform: uppercase
 	color: $light-navy
